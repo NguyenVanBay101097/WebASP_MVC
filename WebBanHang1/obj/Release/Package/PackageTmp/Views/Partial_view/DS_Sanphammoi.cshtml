@@ -1,0 +1,80 @@
+﻿@using PagedList.Mvc
+@model PagedList.IPagedList<WebBanHang1.Models.Products>
+<div class="section group">
+    @{
+        int j = 0;
+        for (int i = 0; i < Model.Count; i++)
+        {
+
+
+
+            if (j < (Model.Count / 4) && i == (4 * j))
+            {
+                <br style="clear:both;" />
+
+                <div class="grid_1_of_4 images_1_of_4" style=" margin-left:0">
+                    <a href="~/Sanpham/@Model[i].ProductName-@Model[i].ProductID"><img src="~/Images/@Model[i].Picture" alt="" /></a>
+                    <h2><a href="~/Sanpham/@Model[i].ProductName-@Model[i].ProductID">@Model[i].ProductName </a> </h2>
+                    <div class="price-details">
+                        <div class="price-number">
+                            <p>
+                                <span class="rupees" style="float:left;color:red">@Model[i].PricePresent.Value.ToString("0,00") đ</span>
+                                @if (Model[i].UnitPrice != null && Model[i].UnitPrice > Model[i].PricePresent)
+                                {
+                                    <span style="float:right;text-decoration:line-through;">@Model[i].UnitPrice.Value.ToString("0,00") đ</span>
+                                }
+                            </p>
+                        </div>
+                        <div class="add-cart">
+                            <h4><a class="them" href="~/Gio/Them?id=@Model[i].ProductID&sl=1">Thêm vào giỏ hàng</a></h4>
+
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                </div>
+                j++;
+                continue;
+            }
+
+
+
+
+            <div class="grid_1_of_4 images_1_of_4">
+
+
+                <a href="~/Sanpham/@Model[i].ProductName-@Model[i].ProductID"><img src="~/Images/@Model[i].Picture" alt="" /></a>
+                <h2><a href="~/Sanpham/@Model[i].ProductName-@Model[i].ProductID">@Model[i].ProductName </a> </h2>
+
+                <div class="price-details">
+                    <div class="price-number">
+                        <p>
+                            <span class="rupees" style="float:left; color:red;">@Model[i].PricePresent.Value.ToString("0,00") đ</span>
+                            @if (Model[i].UnitPrice != null && Model[i].UnitPrice > Model[i].PricePresent)
+                            {
+                                <span style="float:right;text-decoration:line-through;">@Model[i].UnitPrice.Value.ToString("0,00") đ</span>
+                            }
+                        </p>
+                    </div>
+                    <div class="add-cart">
+                        <h4><a class="them" href="~/Gio/Them?id=@Model[i].ProductID&sl=1">Thêm vào giỏ hàng</a></h4>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+            </div>
+
+        }
+    }
+
+    <div style="clear:both;"></div>
+    @if (TempData["controller"] != null)
+    {
+
+
+        @Html.PagedListPager(Model, (Page) => Url.Action(TempData["action"].ToString(), TempData["controller"].ToString(), new { Page, ViewBag.keysearch }))
+    }
+
+</div>
+
+<link href="~/Content/SP_banchay.css" rel="stylesheet" />

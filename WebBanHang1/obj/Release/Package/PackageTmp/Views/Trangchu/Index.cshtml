@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.title = "Trang chủ";
+}
+@Html.Action("Partial_danhmuc", "Trangchu")
+@if (TempData["thanhcong"] != null)
+{
+    @Html.Raw(TempData["thanhcong"].ToString());
+}
+
+<div class="main">
+    <div class="content">
+        <div class="content_top">
+            <div class="heading">
+                <h3>Sản Phẩm Mới</h3>
+            </div>
+            <div class="see">
+                <p><a href="/Danhsachsanpham">Xem tất cả</a></p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        @Html.Action("Partial_Sanphammoi", "Trangchu", new { soluong = 4 })
+        @Html.Action("Partial_SanphamBanchay", "Trangchu", new { soluong = 4 })
+
+    </div>
+</div>

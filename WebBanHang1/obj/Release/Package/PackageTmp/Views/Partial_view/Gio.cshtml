@@ -1,0 +1,43 @@
+﻿@if (((WebBanHang1.Models.Gio)Session["gio"]).DSSP.Count > 0)
+{
+    TempData["tongtien"] = 0;
+
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Mã SP</td>
+                <td>Tên SP</td>
+                <td>Ảnh SP</td>
+                <td>Số lượng</td>
+                <td>Đơn giá</td>
+                <td>Thành Tiền</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ProductID</td>
+                    <td><a class="tensp" href="~/Sanpham/@item.ProductName-@item.ProductID">@item.ProductName</a></td>
+                    <td><img style="max-width:40%;max-height:80%;min-width:100px;" src="~/Images/@item.Picture" alt="@item.ProductName" title="@item.ProductName" /></td>
+                    <td><input type="number" class="txtsoluong" data-id="@item.ProductID" value="@item.SoLuong" max="@item.SoLuongTrongKho" min="1" /></td>
+                    <script type="text/javascript">
+                        $(".txtsoluong").blur(function () {
+                            if ($(this).val()<1) {
+                                $(this).val(1);
+                            }
+                            if ($(this).val()>@item.SoLuongTrongKho) {
+                                $(this).val(@item.SoLuongTrongKho);
+                            }
+                        });
+                    </script>
+                    <td>@item.PricePresent.ToString("0,00") đ</td>
+                    <td>@item.ThanhTien.ToString("0,00") đ</td>
+                    <td><a href="#" class="XoaSP" data-id="@item.ProductID">Xóa</a></td>
+                </tr>
+                TempData["tongtien"] = item.ThanhTien + (double.Parse(TempData["tongtien"].ToString()));
+            }
+        </tbody>
+    </table>
+}
+    <script src="~/Scripts/Gio.js"></script>

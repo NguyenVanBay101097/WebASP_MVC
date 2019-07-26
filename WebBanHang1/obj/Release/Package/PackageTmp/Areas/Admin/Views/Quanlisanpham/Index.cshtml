@@ -1,0 +1,154 @@
+﻿
+@{
+    ViewBag.Title = "quản lí sản phẩm";
+    Layout = "~/Areas/Admin/Views/Shared/Layout_Admin.cshtml";
+}
+
+@using PagedList.Mvc
+@model PagedList.IPagedList<WebBanHang1.Models.Products>
+<div class="vung" style="margin-bottom:10%; margin-top:0.5%;overflow:auto;">
+    
+    <div>
+        <span style="float:left;">  <h2>Quản lí sản phẩm</h2></span>
+        <span class="search_box" style="float:left;border:1px solid #ccc;width:30%;margin-left:10%;">
+            @using (Html.BeginForm("Timkiem", "Quanlisanpham", FormMethod.Get))
+            {
+
+                <input type="text" id="keysearch" style="width:92.585%; border:none ;font-size:17px;" placeholder="Nhập từ khóa..." name="keysearch">
+                <button id="tim" style="width:7.415%;float:right;" type="submit"><i class="fa fa-search"></i></button>
+            }
+            <style>
+                #tim:hover {
+                    background: #ccc;
+                }
+            </style>
+        </span>
+        
+        <span style="float:right;line-height:normal">
+            @Html.ActionLink("Thêm mới", "Them", null, new { @class = "btn btn-primary" })
+        </span>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tên SP</th>
+                <th>Hình ảnh</th>
+                <th>Số lượng</th>
+                <th>Giá hiện tại</th>
+                <th>Giảm giá</th>
+                <th>Xem</th>
+                <th>Sửa</th>
+                <th>Xóa</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Count == 0)
+            {
+                <tr>
+                    <td><h4>không có kết quả cho từ khóa: @ViewBag.keysearch</h4></td>
+                </tr>
+            }
+            @foreach (var item in Model)
+            {
+
+
+                <tr style="height:10px;overflow:hidden; ">
+                    <td class="ProductID">@item.ProductID</td>
+                    <td>@item.ProductName</td>
+                    <td><img style="max-width:20%;max-height:100%;min-width:70px;" src="~/Images/@item.Picture" /></td>
+                    <td style="max-width:30em;  overflow:hidden">@item.SoLuongTrongKho</td>
+                    <td>@item.PricePresent</td>
+                    <td>
+                        @if (item.PricePresent < item.UnitPrice)
+                        {
+                            <a class="giamgia" href="#">Có</a>
+                        }
+                        else
+                        { <a class="giamgia">Không</a>}
+                    </td>
+
+
+                    <td><a href="/Quanlisanpham/Chitiet/@item.ProductID">Xem</a></td>
+                    <td><a href="/Quanlisanpham/Sua/@item.ProductID">Sửa</a></td>
+                    <td>
+                        @Html.ActionLink("Xóa", "Xoa", new { id = item.ProductID })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div style="clear:both;"></div>
+    @Html.PagedListPager(Model, (Page) => Url.Action(TempData["action"].ToString(), TempData["controller"].ToString(), new { Page, Keysearch = ViewBag.keysearch }))
+    @* @Html.PagedListPager(Model, (Page) => Url.Action("Index", "Quanlisanpham", new { Page }))*@
+</div>
+
+<script>
+    $(".giamgia").click(function (e) {
+        e.preventDefault();
+        var url = "/Admin/Quanlisanpham/KhongGiamgia";
+        var d = $(this);
+        $.ajax({
+            url: url,
+            data: { id: $($(this).parent().prevAll('.ProductID')).text() },
+            cache: false,
+            success: function (data) {
+                $(d.parent().prev()).html(data);
+                d.text("Không");
+                d.removeAttr("href");
+            },
+            error: function (reponse) {
+                alert("error : " + reponse);
+            }
+        });
+
+
+
+    });
+</script>
+<script src="~/Scripts/jquery-ui.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#keysearch").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: "/Admin/Quanlisanpham/AutocompleteKeysearch",
+                    type: "POST",
+                    dataType: "json",
+                    data: { Prefix: request.term },
+                    success: function (data) {
+                        response($.map(data, function (item) {
+                            return { label: item.ProductName, value: item.ProductName };
+                        }))
+
+                    }
+                })
+            },
+            messages: {
+                noResults: "", results: ""
+            }
+        });
+    })
+</script>
+<link href="~/Content/SP_banchay.css" rel="stylesheet" />
+
+<style>
+    ul {
+        list-style:none;
+    }
+    .ui-autocomplete {
+        background-color: #fff;
+    }
+    .ui-menu {
+    margin:0px;padding:0px;
+    }
+        .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover
+    {
+        background-color: #eceff1;
+        border-color: #eceff1;
+        color: #0d47a1;
+    }
+
+    
+    
+</style>

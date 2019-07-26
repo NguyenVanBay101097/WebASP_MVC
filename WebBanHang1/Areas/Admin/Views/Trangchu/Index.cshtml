@@ -1,0 +1,103 @@
+﻿
+@{
+    ViewBag.Title = "Trang chu ";
+    Layout = "~/Areas/Admin/Views/Shared/Layout_Admin.cshtml";
+}
+<style>
+</style>
+<h2 style="background-color:#e3f1ee"><b>Dashboard</b></h2>
+<hr class="breadcrumb" style="margin:0;" />
+<div class="row " style="text-align:center;margin:auto;    display: flex;
+    justify-content: center;">
+    <div class="col-xl-5 col-sm-5 mb-5">
+        <div class="card text-white bg-primary o-hidden h-100">
+            <div class="card-body">
+                <div class="card-body-icon">
+                    <i class="fa fa-comments-o" aria-hidden="true"></i>
+                </div>
+                <div class="mr-5">@ViewBag.XemLienlac new liên lạc</div>
+            </div>
+            <a class="card-footer text-white clearfix small z-1" href="/admin/lienlacs">
+                <span class="float-left">View Details</span>
+                <span class="float-right">
+                    >>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="col-xl-5 col-sm-5 mb-5">
+        <div class="card text-white bg-warning o-hidden h-100">
+            <div class="card-body">
+                <div class="card-body-icon">
+                    <i class="fa fa-shopping-basket"></i>
+                </div>
+                <div class="mr-5"> @ViewBag.XemOrder new orders!</div>
+            </div>
+            <a class="card-footer text-white clearfix small z-1" href="/admin/orders">
+                <span class="float-left">View Details</span>
+                <span class="float-right">
+                    >>
+                </span>
+            </a>
+        </div>
+    </div>
+
+</div>
+@*chart*@
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script>
+    $(document).ready(function () {
+        $.getJSON("/Admin/Trangchu/GetData", function (data) {
+            var Names = []
+            var Qts = []
+            for (var i = 0; i < data.length; i++) {
+                Names.push(data[i].name);
+                Qts.push(data[i].count);
+            }
+
+            Highcharts.chart('container', {
+                chart: {
+                    type: 'line'
+                },
+                title: {
+                    text: 'Doanh thu 10 tháng gần nhất'
+                },
+                subtitle: {
+                    text: 'công ty âm nhạc THU THIEN'
+                },
+                xAxis: {
+                    categories: Names
+                },
+                yAxis: {
+                    title: {
+                        text: 'Doanh thu (vnđ)'
+                    }
+                },
+                plotOptions: {
+                    line: {
+                        dataLabels: {
+                            enabled: true
+                        },
+                        enableMouseTracking: false
+                    }
+                },
+                series: [{
+                    name: 'Doanh thu',
+                    data: Qts
+                }]
+            });
+        });
+    });
+
+
+</script>
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fas fa-chart-area"></i>
+        Area Chart Example
+    </div>
+    <div id="container" style="min-width:310px;height:400px;margin:0 auto"></div>
+</div>
+

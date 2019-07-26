@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- inject:css -->
+
+    <link href="~/Areas/Admin/Content/style.css" rel="stylesheet" />
+    <!-- endinject -->
+    <link rel="shortcut icon" href="~/Areas/Admin/Images/favicon.png" />
+    <script src="~/Scripts/jquery-1.7.2.min.js"></script>
+    <script src="~/Areas/Admin/Scripts/chart.js"></script>
+    <script src="~/Areas/Admin/Scripts/dashboard.js"></script>
+    <script src="~/Areas/Admin/Scripts/maps.js"></script>
+    <script src="~/Areas/Admin/Scripts/misc.js"></script>
+    <script src="~/Areas/Admin/Scripts/off-canvas.js"></script>
+    <script src="~/Areas/Admin/ckfinder/ckfinder.js"></script>
+    <link href="~/Areas/Admin/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+</head>
+<body >
+    <div  class="container-scroller">
+        <!-- partial:partials/_navbar.html -->
+        <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
+                <a class="navbar-brand brand-logo" href="~/Trangchu" target="_blank"><img src="~/Images/logo.png" alt="logo" /></a>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-items-center">
+                <ul class="navbar-nav navbar-nav-left header-links  d-md-flex">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"><i class="mdi mdi-image-filter"></i>Gallery</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link"><i class="mdi mdi-email-outline"></i>Inbox</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"><i class="mdi mdi-calendar"></i>Calendar</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav navbar-nav-right">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+                            <i class="mdi mdi-bell-ring"></i>
+                            <span class="count">4</span>
+                        </a>
+                       
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                            <i class="mdi mdi-email-variant"></i>
+                            <span class="count">7</span>
+                        </a>
+                        
+                    </li>
+                    @if (Session["employee"] != null)
+                    {
+                        var emp = Session["employee"] as WebBanHang1.Models.Employees;
+                    <li class="nav-item dropdown d-lg-block">
+                        <a class="nav-link count-indicator img-profile dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false" href="#">
+                            <img class="img-xs rounded-circle" src="@emp.Picture" alt="anh nhan vien">
+                        </a>
+                        <div  class="dropdown-menu sub_img-profile dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
+
+                            <a href="#" id="thongtintaikhoan" class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <img src="~/Areas/Admin/Images/menu_icons/profile.png" alt="image" class="profile-pic">
+                                </div>
+                                <div class="preview-item-content flex-grow">
+                                    <span>Thông tin tài khoản</span>
+                                </div>
+                            </a>
+                            <a href="#" id="dangxuat" class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <img src="~/Areas/Admin/Images/menu_icons/logout.png" alt="image" class="profile-pic">
+                                </div>
+                                <div class="preview-item-content flex-grow">
+                                    <span>Đăng xuất</span>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    }
+                </ul>
+            </div>
+        </nav>
+        <script>
+            $('.img-profile').click(function () {
+                $(this).nextAll('.sub_img-profile').toggle();
+            });
+           
+            $("#dangxuat").click(function () {
+
+                var url = '@Url.Action("Dangxuat","Trangchu")';
+                $.ajax({
+                    url: url,
+                    cache: false,
+                    type: 'GET',
+                    success: function () {
+                        window.location.href = '@Url.Action("Login","Trangchu")';
+                    },
+                    error: function (reponse) {
+                        alert("error : " + reponse);
+                    }
+                });
+            });
+            $('#thongtintaikhoan').click(function () {
+                $.ajax({
+                    url: '@Url.Action("Thongtintaikhoan","Trangchu")',
+                    type: 'GET',
+                    cache: false,
+                    success: function (result) {
+                        window.location.href = '@Url.Action("Thongtintaikhoan","Trangchu")';
+                    },
+                    error: function (reponse) { alert(reponse); }
+                });
+               
+            });
+        </script>
+        <!-- partial -->
+        <div style="overflow:auto;margin-top:4.4%;" class="container-fluid page-body-wrapper">
+            <!-- partial:partials/_sidebar.html -->
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <ul class="nav" style="height:100%;overflow:auto;position:fixed;padding-bottom:10%;">
+                    <li class="nav-item nav-profile">
+                        @if (Session["employee"] != null)
+                        {
+                            var emp = Session["employee"] as WebBanHang1.Models.Employees;
+                            <div class="nav-link">
+                                <div class="profile-image"> <img src="@emp.Picture" alt="image" /> <span class="online-status online"></span> </div>
+                                <div class="profile-name">
+                                    <p class="name">@emp.EmployeeName</p>
+                                    <p class="designation">@emp.TenVT</p>
+                                    <div class="badge badge-teal mx-auto mt-3">Online</div>
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <script>
+                                window.location.href = '/Admin/Trangchu';
+                            </script>
+                        }
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="/Admin/Trangchu"><img class="menu-icon" src="~/Areas/Admin/Images/menu_icons/01.png" alt="menu icon"><span class="menu-title">Trang chủ</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Admin/Category_Fathers"><img class="menu-icon" src="~/Areas/Admin/Images/menu_icons/category-icon.png" alt="menu icon"><span class="menu-title">Quản lí Danh mục </span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Admin/Quanlisanpham"><img class="menu-icon" src="~/Areas/Admin/Images/menu_icons/03.png" alt="menu icon"><span class="menu-title">Quản lí sản phẩm</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Admin/Orders"><img class="menu-icon" src="~/Areas/Admin/Images/menu_icons/04.png" alt="menu icon"><span class="menu-title">Hóa đơn</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Admin/Employees"><img class="menu-icon" src="~/Areas/Admin/Images/menu_icons/employee.png" alt="menu icon"><span class="menu-title">Nhân viên</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Admin/Customers"><img class="menu-icon" src="~/Areas/Admin/Images/menu_icons/customer.png" alt="menu icon"><span class="menu-title">Khách hàng</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Admin/Lienlacs"><img class="menu-icon" src="~/Areas/Admin/Images/menu_icons/contact.png" alt="menu icon"> <span class="menu-title">Liên Lạc</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Admin/Vaitros"><img class="menu-icon" src="~/Areas/Admin/Images/menu_icons/contact.png" alt="menu icon"> <span class="menu-title">Vai Trò</span></a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="/Admin/Phanquyens" aria-expanded="false" aria-controls="general-pages"> <img class="menu-icon" src="~/Areas/Admin/Images/menu_icons/quyền.png" alt="menu icon"> <span class="menu-title">Phân Quyền</span></a>
+
+                    </li>
+
+
+                </ul>
+            </nav>
+            <!-- partial -->
+            <div style="position:relative;overflow:auto;" class="main-panel">
+                <div style="margin-bottom:2%;">
+
+                    @RenderBody()
+
+                    <div>
+                        <!-- content-wrapper ends -->
+                        <!-- partial:partials/_footer.html -->
+                        <footer class="footer" style="position:absolute;bottom:0%;">
+                            <div class="container-fluid clearfix">
+                                <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2018 <a href="http://www.bootstrapdash.com/" target="_blank">Bootstrapdash</a>. All rights reserved.</span>
+                                <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
+                            </div>
+                        </footer>
+                        <!-- partial -->
+                    </div>
+                    <!-- main-panel ends -->
+                </div>
+                <!-- page-body-wrapper ends -->
+            </div>
+            <!-- container-scroller -->
+            <!-- plugins:js -->
+            <!-- endinject -->
+
+            @RenderSection("scripts", required: false)
+            @RenderSection("jsFooter", required: false)
+            <!-- End custom js for this page-->
+</body>
+</html>

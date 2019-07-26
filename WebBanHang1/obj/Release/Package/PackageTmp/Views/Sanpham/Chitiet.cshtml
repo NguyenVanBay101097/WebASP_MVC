@@ -1,0 +1,225 @@
+﻿
+@{
+    ViewBag.Title = "chi tiết sản phẩm " + Model.ProductName;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model WebBanHang1.Models.Products
+<link href="~/Content/easy-responsive-tabs.css" rel="stylesheet" />
+<script src="~/Scripts/easyResponsiveTabs.js"></script>
+<script src="~/Scripts/slides.min.jquery.js"></script>
+<link href="~/Content/global.css" rel="stylesheet" />
+<script>
+    $(function () {
+        $('#products').slides({
+            preload: true,
+            preloadImage: 'img/loading.gif',
+            effect: 'slide, fade',
+            crossfade: true,
+            slideSpeed: 350,
+            fadeSpeed: 500,
+            generateNextPrev: true,
+            generatePagination: false
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $().UItoTop({ easingType: 'easeOutQuart' });
+
+    });
+</script>
+<style>
+    .subscribe {
+        background-color: #f2baa1;
+        text-align: center;
+        margin-top: 10px;
+        padding: 15px 0 15px 0;
+        border-right: 25px solid #FCFCFC;
+        position: relative;
+    }
+    .triangle_left {
+        position: absolute;
+        height: 0px;
+        width: 0px;
+        right: -25px;
+        top: 0;
+        border-left: 25px solid #f2baa1;
+        border-top: 24px solid transparent;
+        border-bottom: 24px solid transparent;
+        float: left;
+    }
+        .subscribe:hover {
+        cursor:pointer;
+        opacity:0.5;
+        color:black;
+        font-weight:bold;
+        }
+</style>
+<div class="main">
+   
+    <div class="content">
+        <div class="content_top">
+            <div class="back-links">
+                <p><a href="index.html">Home</a> >>>> <a href="~/Danhsachsanpham">sản phẩm</a>>><label>@Model.ProductName</label></p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="section group">
+            <div class="cont-desc span_1_of_2">
+                <div class="product-details">
+                    <div class="grid images_3_of_2">
+                        <div id="container">
+                            <div id="products_example">
+                                <div id="products">
+                                    <div class="slides_container">
+                                        <a href="#" target="_blank"><img src="~/Images/@Model.Picture" alt=" " /></a>
+                               @if (Model.Picture1!=null) {         <a href="#" target="_blank"><img src="~/Images/@Model.Picture1" alt=" " /></a>}
+                               @if (Model.Picture2!=null) {         <a href="#" target="_blank"><img src="~/Images/@Model.Picture2" alt=" " /></a>}
+                               @if (Model.Picture3!=null) {         <a href="#" target="_blank"><img src="~/Images/@Model.Picture3" alt=" " /></a>}
+                               @if (Model.Picture4!=null) {         <a href="#" target="_blank"><img src="~/Images/@Model.Picture4" alt=" " /></a>}
+                                        
+                                    </div>
+                                    <ul class="pagination">
+                                       <li><a href="#"><img src="~/Images/@Model.Picture" title="@Model.ProductName" /></a></li>
+                                       @if (Model.Picture1!=null) {    <li><a href="#"><img src="~/Images/@Model.Picture1" title="@Model.ProductName" /></a></li>}
+                                       @if (Model.Picture2!=null) {   <li><a href="#"><img src="~/Images/@Model.Picture2" title="@Model.ProductName" alt="dsfsdfasfa " /></a></li>}
+                                       @if (Model.Picture2!=null) {   <li><a href="#"><img src="~/Images/@Model.Picture2" title="@Model.ProductName" alt="dsfsdfasfa " /></a></li>}
+                                       @if (Model.Picture3!=null) {   <li><a href="#"><img src="~/Images/@Model.Picture2" title="@Model.ProductName" alt="dsfsdfasfa " /></a></li>}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desc span_3_of_2">
+                        <h2>@Model.ProductName </h2>
+                        <div class="price">
+                            <p>Giá sản phẩm: <span>@Model.PricePresent.Value.ToString("0,00") đ</span></p>
+                        </div>
+                        @using (Html.BeginForm("Them", "Gio", FormMethod.Post))
+                        {
+                            <div class="available">
+                                <p>tùy chọn :</p>
+
+                                <ul>
+                                  
+                                    <li>
+                                        <input name="id" hidden="hidden" value="@Model.ProductID"/>
+                                        Số lượng:<input  class="txtsoluong" name="sl" onkeypress="return isNumberKey(event)"  type="number" min="0" value="1" style="max-width:10%;" max="@Model.SoLuongTrongKho" />
+
+                                        <script type="text/javascript">
+                        $(".txtsoluong").blur(function () {
+                            if ($(this).val()<1) {
+                                $(this).val(1);
+                            }
+                            if ($(this).val()>@Model.SoLuongTrongKho) {
+                                $(this).val(@Model.SoLuongTrongKho);
+                            }
+                        });
+                                        </script>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="share-desc">
+                                <div class="share">
+                                    <p>Share Product :</p>
+                                    <ul>
+                                        <li><a href="#"><img src="~/Images/facebook.png" alt="" /></a></li>
+                                        <li><a href="#"><img src="~/Images/twitter.png" alt="" /></a></li>
+                                    </ul>
+
+                                </div>
+                                <input type="submit" class="button" style="background-color:#f65109" value="Thêm vào giỏ" />
+                                <div class="clear"></div>
+                                
+                            </div>}
+                         
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="product_desc">
+                        <div id="horizontalTab">
+                            <ul class="resp-tabs-list">
+                                <li>Chi tiết sản phẩm</li>
+                              
+                                <div class="clear"></div>
+                            </ul>
+                            <div class="resp-tabs-container">
+                                <div class="product-desc">
+                                    <p>@Html.Raw(Model.InfoDetail)</p>
+                                    
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        $(document).ready(function () {
+                            $('#horizontalTab').easyResponsiveTabs({
+                                type: 'default', //Types: default, vertical, accordion
+                                width: 'auto', //auto or any width like 600px
+                                fit: true   // 100% fit in a container
+                            });
+                        });</script>
+                    <div class="content_bottom">
+                        <div class="heading">
+                            <h3>Sản phẩm cùng danh mục</h3>
+                        </div>
+                        <div class="see">
+                            <p><a href="/Loai/">Xem tất cả</a></p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="section group">
+                        @foreach (WebBanHang1.Models.Products item in ViewBag.DSSPLienquan)
+                        {
+
+                            
+                        <div class="grid_1_of_4 images_1_of_4">
+                            <a href="/Sanpham/@item.ProductName-@item.ProductID"><img src="~/Images/@item.Picture" alt=""></a>
+                            <div class="price-details">
+                                <div class="price-number">
+                                    <p>
+                                        <span class="rupees" style="float:left;color:red">@item.PricePresent.Value.ToString("0,00") đ</span>
+                                        @if ( item.UnitPrice >item.PricePresent)
+                                        {
+                                            <span style="float:right;text-decoration:line-through;">@item.UnitPrice.Value.ToString("0,00") đ</span>
+                                        }
+                                    </p>
+                                </div>
+                                <div class="add-cart">
+                                    <h4><a href="~/Gio/Them?id=@item.ProductID&sl=1">Thêm vào giỏ hàng</a></h4>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        }
+                    </div>
+                </div>
+                <div class="rightsidebar span_3_of_1">
+                    <h2 style="text-align:center;">Danh Mục </h2>
+                    <ul class="categories">
+                        @foreach (var item in ViewBag.dsdm)
+                        {
+                            <li>
+                                <a href="~/ChungLoai/@item.CategoryName-@item.CategoryFatherID">@item.CategoryName</a>
+                                <ul class="sub_ul">
+                                    @foreach (WebBanHang1.Models.Category_Childs dmc in item.Category_Childs)
+                                    {
+                                        <li><a href="~/Loai/@dmc.CategoryName-@dmc.CategoryChildID">@dmc.CategoryName</a></li>
+                                    }
+
+                                </ul>
+                            </li>
+
+                        }
+                    </ul>
+                    <div class="subscribe">
+                        <a href="/Lienlac">Phản hồi với chúng tôi ?</a>
+                        <div class="triangle_left"></div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+

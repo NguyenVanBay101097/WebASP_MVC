@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "Đơn hàng"+Model.OrderID;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using WebBanHang1.Models;
+@model WebBanHang1.Models.Orders
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+@{
+
+
+    var soluong = 0; double tongtien = 0;
+
+
+}
+<div class="vung">
+    <h1>Đơn hàng: <a style="font-size:50%;" href="">@Model.OrderID</a></h1>
+    <span>đặt ngày: @Convert.ToDateTime(Model.OrderDate).ToShortDateString()</span>
+    @if (Model.Status == false)
+    {
+        <a style="float:right;margin-right:1%;" href="~/Gio/Xoadonhang/@Model.OrderID">Hủy đơn hàng</a>
+    }
+    else
+    {
+        <span style="float:right;margin-right:1%;">đơn hàng đã giao!</span>
+    }
+</div>
+    <div class="vung">
+        <table width="100%" class="table">
+            <tr>
+                <td>Mã SP</td>
+                <td>Tên SP</td>
+                <td>Ảnh SP</td>
+                <td>Số lượng</td>
+                <td>Đơn giá</td>
+                <td>Thành Tiền</td>
+
+            </tr>
+            @{
+                var ds = new BH().TimCTHD(ViewBag.id);
+                foreach (Order_Details i in ds)
+                {
+                    soluong += (int)i.Quantity;
+                    tongtien += (double)i.TotalMoney;
+
+
+                    <tr>
+                        <td><a href="~/Sanpham/@i.ProductName-@i.ProductID">@i.ProductID</a></td>
+                        <td><a href="~/Sanpham/@i.ProductName-@i.ProductID">@i.ProductName</a></td>
+                        <td><img style="max-width:40%;max-height:20%;min-width:100px;" src="~/Images/@i.Products.Picture" /></td>
+                        <td>@i.Quantity</td>
+                        <td>@i.PricePresent.Value.ToString("0,00") đ</td>
+                        <td>@i.TotalMoney.Value.ToString("0,00") đ</td>
+
+                    </tr>
+                }
+            }
+        </table>
+
+    </div>
+    <div class="vung" style=" width:40%;float:left;clear:both;">
+        <h3>Địa chỉ giao hàng</h3>
+        <p>
+            @Model.RecevierName
+        </p>
+        <p>
+            @Model.Address
+        </p>
+        <p>@Model.Phone</p>
+    </div>
+    <div class="vung" style="width:50%;float:left;">
+
+        <h3>Tổng cộng</h3>
+        <div><label>Số lượng sản phẩm:</label><label>@soluong.ToString()</label></div>
+        <div><label>Tổng tiền:</label><label>@tongtien.ToString("0,000") đ</label></div>
+        <div><label style="color:#f7cf6e">Giao hàng miễn phí toàn quốc!</label></div>
+    </div>
+    <div style="clear:both;"></div>
+

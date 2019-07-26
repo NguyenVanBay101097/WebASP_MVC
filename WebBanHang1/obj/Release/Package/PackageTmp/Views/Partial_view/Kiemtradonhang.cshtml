@@ -1,0 +1,58 @@
+﻿@using WebBanHang1.Models;
+@model List<WebBanHang1.Models.Orders>
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+@if (Model.Count == 0)
+{
+    <p>không có đơn hàng nào!</p>
+}
+@foreach (var item in Model)
+{
+
+
+    <div style="background-color:#FCFCFC;margin:2%;">
+        Đơn hàng: <a href="~/Gio/Donhang/@item.OrderID">@item.OrderID</a>
+        <a style="float:right;margin-right:5%;" href="~/Gio/Donhang/@item.OrderID">Quản lí</a>
+        <br />
+        <span style="clear:both;">đặt ngày @Convert.ToDateTime(@item.OrderDate.ToString()).ToString("dd/MM/yyyy")</span>
+        <table width="100%" class="table">
+            <tr>
+                <td>Mã SP</td>
+                <td>Tên SP</td>
+                <td>Ảnh SP</td>
+                <td>Số lượng</td>
+                <td>Đơn giá</td>
+                <td>Thành Tiền</td>
+                <td>Trạng thái</td>
+
+            </tr>
+            @{
+                var ds = new BH().TimCTHD(item.OrderID);
+                foreach (Order_Details i in ds)
+                {
+
+
+
+                    <tr>
+                        <td><a href="~/Sanpham/@i.ProductName-@i.ProductID">@i.ProductID</a></td>
+                        <td><a href="~/Sanpham/@i.ProductName-@i.ProductID">@i.ProductName</a></td>
+                        <td><img style="max-width:40%;max-height:20%;min-width:100px;" src="~/Images/@i.Products.Picture" /></td>
+                        <td>@i.Quantity</td>
+                        <td>@i.PricePresent.Value.ToString("0,00") đ</td>
+                        <td>@i.TotalMoney.Value.ToString("0,00") đ</td>
+                        <td>
+                            @if (item.Status == false)
+                            {
+                                <span>đang giao</span>
+                            }
+                            else
+                            { <span>đã giao</span>}
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+
+    </div>
+}
+

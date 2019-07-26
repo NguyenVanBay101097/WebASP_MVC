@@ -1,0 +1,53 @@
+﻿@model IEnumerable<WebBanHang1.Models.Order_Details>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/Layout_Admin.cshtml";
+}
+
+<h2>Chi tiết hóa đơn @Model.ElementAt(0).OrderID</h2>
+<table class="table">
+    <tr>
+        <th>
+            Tên sản phẩm
+        </th>
+
+        <th>
+            Giá bán
+        </th>
+        <th>
+            Số lượng
+        </th>
+        <th>
+            Tổng tiền
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Products.ProductName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.PricePresent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @item.TotalMoney.Value.ToString("0,00") vnđ
+            </td>
+            <td>
+                @Html.ActionLink("Sửa", "Edit", new { id = item.OrderID, idPr = item.ProductID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.OrderID, idPr = item.ProductID })
+            </td>
+        </tr>
+    }
+
+</table>
+@Html.ActionLink("Quay lại", "Index","Orders") 
+
+

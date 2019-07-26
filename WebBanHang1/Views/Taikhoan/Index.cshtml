@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewBag.Title = "Thông tin tài khoản";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model WebBanHang1.Models.Customers
+@using (Html.BeginForm("Capnhat", "Taikhoan", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="section group" style="margin-top:4%;">
+        <link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+        <div class="col span_2_of_3" style="background-color:#fafafa;">
+            <div class="contact-form">
+                <h3 style="font-size:150%;">Thông tin tài khoản</h3>
+
+                <div>
+                    <span>
+                        <label>
+                            Tên tài khoản
+                            @Html.HiddenFor(x => x.CustomerID)
+                        </label>
+                    </span>
+                    <span>@Html.TextBoxFor(x => x.CustomerName, new { @required = true, @readonly = true, pattern = @".*\S+.*", @title = "không để trống" })</span>
+                </div>
+                <div>
+                    <span><label>E-mail</label></span>
+                    <span>@Html.TextBoxFor(x => x.Email, new { @readonly = true, pattern = @"[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", @title = "nhập gmail" })</span>
+                </div>
+                <div>
+                    <span><label>Số điện thoại</label></span>
+                    <span>@Html.TextBoxFor(x => x.phonenumber, new { @readonly = true, pattern = @"0[0-9\s.-]{9,13}", @title = "nhập số điện thoại" })</span>
+                </div>
+                <div>
+                    <span><label>Địa chỉ</label></span>
+                    <span>@Html.TextAreaFor(x => x.Address, new { @readonly = true, pattern = @".*\S+.*", @title = "không để trống" })</span>
+                </div>
+
+                <span>
+                    <input type="submit" value="Cập nhật" class="btn btn-default">
+                    <input type="button" id="btnsua" value="Sửa" class="btn btn-default">
+                    <input type="button" id="btnxoa" value="Xóa tài khoản" class="btn-default btn">
+                    <script>
+                        $('#btnxoa').click(function () {
+                            window.location.href = "Taikhoan/Xoa";
+                        });
+                    </script>
+                </span>
+
+            </div>
+        </div>
+        <div class="col span_2_of_3" style="background-color:#fafafa;width:29%;">
+            <div class="contact-form">
+
+                <span><label>Tên đăng nhập</label></span>
+                <span>@Html.TextBoxFor(x => x.TenDN, new { @readonly = true, @required = true, pattern = @".*\S+.*", @title = "không để trống" })</span>
+            </div>
+            <div class="contact-form">
+                <span><label>Mật khẩu</label></span>
+                <span>@Html.TextBoxFor(x => x.MatKhau, new { @readonly = true, @required = true, pattern = @".*\S+.*", @title = "không để trống" })</span>
+            </div>
+        </div>
+        <div class="col span_2_of_3" style="background-color:#fafafa;width:29%;">
+            <img id="hinhanh" src="@if (Model.Picture == null) { @Url.Content("~/Images/none-image.jpg")} else {@Url.Content("~/Images/"+Model.Picture) } " style="max-height:80%;max-width:100%;" />
+            <input type="file" onchange="readURL(this);" name="myImage" id="myImage" accept="image/*" />
+
+        </div>
+
+
+
+        <script>
+            $("#btnsua").click(function () {
+                $("input:not(#TenDN)").attr("readonly", false);
+                $("textarea").attr("readonly", false);
+                $("#CustomerName").focus();
+            })
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('#hinhanh')
+                            .attr('src', e.target.result)
+
+                    };
+
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+        </script>
+    </div>
+}
+<h1 style="margin-bottom:2%;">Đơn hàng gần đây</h1>
+@Html.Action("Kiemtradonhang", "Gio",new { soluong=3 })

@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "sản phẩm bán chạy";
+    TempData["action"] = "Banchay";
+    TempData["controller"] = "Sanpham";
+}
+@if (TempData["giotrong"] != null)
+{
+    @Html.Raw(TempData["giotrong"])
+}
+@Html.Action("Partial_SanphamBanchay", "Trangchu", new { soluong = 0 })

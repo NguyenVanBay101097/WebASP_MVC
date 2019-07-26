@@ -1,0 +1,89 @@
+﻿@model WebBanHang1.Models.Orders
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/Layout_Admin.cshtml";
+}
+
+<h2>Xóa Hóa Đơn @Model.OrderID</h2>
+
+<h3>bạn có muốn xóa?</h3>
+<div>
+    <h4>Orders</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Ngày order
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderDate)
+        </dd>
+
+        <dt>
+            Tên người nhận
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RecevierName)
+        </dd>
+
+        <dt>
+            Địa chỉ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            Trạng thái
+        </dt>
+
+        <dd>
+            <span>@(Model.Status==true ? "Đã giao" : "Đang giao")</span>
+        </dd>
+
+        <dt>
+            Tổng tiền
+        </dt>
+
+        <dd>
+            @Model.TotalMoney.Value.ToString("0,00") vnđ
+        </dd>
+
+        <dt>
+            Số điện thoại
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            Gmail
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            Trả lại
+        </dt>
+
+        <dd>
+            @(Model.Tralai?"Trả lại":"Không trả lại")
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-pinterest" /> |
+            @Html.ActionLink("Quay lại", "Index")
+        </div>
+    }
+</div>

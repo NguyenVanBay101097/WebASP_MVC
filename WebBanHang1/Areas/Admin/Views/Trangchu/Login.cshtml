@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin - Login</title>
+
+    <!-- Bootstrap core CSS-->
+    <link href="~/Areas/Admin/Content/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom fonts for this template-->
+    <link href="~/Areas/Admin/Content/all.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template-->
+    <link href="~/Areas/Admin/Content/sb-admin.css" rel="stylesheet" />
+ 
+    <script src="~/Scripts/sweetalert2.all.js"></script>
+</head>
+
+<body class="bg-dark">
+    @if (TempData["err_tendangnhap"] != null)
+    {
+        @Html.Raw(TempData["err_tendangnhap"]);
+    }
+    @if (TempData["err_matkhau"] != null)
+    {
+        @Html.Raw(TempData["err_matkhau"]);
+    }
+    <div class="container">
+        <div class="card card-login mx-auto mt-5">
+            <div class="card-header">Đăng nhập vào hệ thống</div>
+
+
+            <div class="card-body">
+                <form method="post">
+                    <div class="form-group">
+                        <div class="form-label-group">
+                            <input type="text" name="TenDN" id="inputEmail" class="form-control" placeholder="Email address" required="required" autofocus="autofocus">
+                            <label for="inputEmail">Tên đăng nhập</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-label-group">
+                            <input type="password" name="MatKhau" id="inputPassword" class="form-control" placeholder="Password" required="required">
+                            <label for="inputPassword">Mật khẩu</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="remember-me">
+                                Remember Password
+                            </label>
+                        </div>
+                    </div>
+                    <input class="btn btn-primary btn-block" type="submit" name="name" value="Đăng nhập" />
+
+                </form>
+
+            </div>
+        </div>
+
+
+</body>
+
+</html>

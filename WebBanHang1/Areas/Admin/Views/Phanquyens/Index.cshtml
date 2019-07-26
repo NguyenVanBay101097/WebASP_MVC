@@ -1,0 +1,82 @@
+﻿@model IEnumerable<WebBanHang1.Models.Quyens>
+@{
+    /**/
+
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/Layout_Admin.cshtml";
+}
+@{TempData["list"] = Model;}
+<script src="~/Scripts/sweetalert2.all.js"></script>
+
+<h2 class="float-left">Phân Quyền</h2>
+<input type="button" id="pq" value="Phân Quyền" class="btn btn-primary float-right" />
+
+<table id="bang" class="table clear table-striped table-primary">
+    <thead>
+        <tr style="color:red;font-weight:bold">
+            <th>Tên Vai Trò</th>
+            <th>Tên Quyền</th>
+            <th><input type="checkbox" onchange="checkall($(this))" id="cbXem"  class="btn btn-success active" />Xem</th>
+            <th><input type="checkbox" onchange="checkall($(this))"id="cbThem" class="btn btn-success active" />Thêm</th>
+            <th><input type="checkbox" onchange="checkall($(this))" id="cbXoa" class="btn btn-success active" />Xoa</th>
+            <th><input type="checkbox" onchange="checkall($(this))" id="cbSua" class="btn btn-success active" />Sua</th>
+
+        </tr>
+    </thead>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.TenVT) </td>
+            <td>@Html.DisplayFor(modelItem => item.TenTW)</td>
+            <td><input style="" name="Xem" type="checkbox" class="btn btn-success active" @(item.Xem == true ? "checked" : "") /></td>
+
+
+            <td><input name="Them" type="checkbox" class="btn btn-success active" @(item.Them == true ? "checked" : "") /></td>
+            <td><input name="Xoa" type="checkbox" class="btn btn-success active" @(item.Xoa == true ? "checked" : "") /></td>
+            <td><input name="Sua" type="checkbox" class="btn btn-success active" @(item.Sua == true ? "checked" : "") /></td>
+
+        </tr>
+    }
+</table>
+<script>
+    function checkall(input) {
+        
+        var checked = $(input).prop('checked');
+        var index = $(input).parent().index();
+        
+        $('#bang>tbody>tr').each(function (i,val) {
+            $(val).children().eq(index).children('input[type=checkbox]').attr('checked',checked);
+        });
+    }
+    $('#pq').click(function () {
+        $('#bang>tbody>tr').each(function () {
+            var object = {
+                TenVT: $(this).find('td').eq(0).text(),
+                TenTW: $(this).find('td').eq(1).text(),
+                Xem: $(this).find('td').eq(2).find('input').prop("checked"),
+                Them: $(this).find('td').eq(3).find('input').prop("checked"),
+                Xoa: $(this).find('td').eq(4).find('input').prop("checked"),
+                Sua: $(this).find('td').eq(5).find('input').prop("checked")
+            };
+
+            $.ajax({
+                url: "/Admin/Phanquyens/Phanquyen",
+                type: "POST",
+                data: { quyen: object },
+                dataType: "Json",
+                //success: function (res) {
+                //    if (res.status==true) {
+                //        swal('đang phân quyền!');
+                //    }
+                //}
+            });
+        }).promise().done(function () {
+            alert("đã phân quyền xong");
+           });
+       
+    });
+</script>
+
+
+

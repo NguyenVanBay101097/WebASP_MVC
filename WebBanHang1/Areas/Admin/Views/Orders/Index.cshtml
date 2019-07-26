@@ -1,0 +1,235 @@
+﻿@using PagedList.Mvc
+@model PagedList.IPagedList<WebBanHang1.Models.Orders>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/Layout_Admin.cshtml";
+}
+<div class="vung" style="width:100%;overflow:auto;">
+    <div style="margin-top:0.3%;">
+        <span style="float:left;">  <h2>Quản lí hóa đơn</h2></span>
+        <span class="search_box" style="float:left;border:1px solid #ccc;width:35%;margin-left:3%;">
+            @using (Html.BeginForm("Timkiem", "Orders", FormMethod.Get))
+            {
+
+                <input type="text"  id="keysearch" style="width:92.585%; border:none ;font-size:17px;" placeholder="Nhập từ khóa..." name="keysearch">
+                <button id="tim"  style="width:7.415%;float:right;" type="submit"><i class="fa fa-search"></i></button>
+            }
+            <style>
+                #tim:hover {
+                    background: #ccc;
+                }
+            </style>
+        </span>
+        <span style="float:right;line-height:normal">
+            <input type="date" onchange="thaydoi();" class="date" id="dateDi" /> đến <input class="date" type="date" onchange="thaydoi();" id="dateDen"    />
+        </span>
+    </div>
+    <table class="table table-striped">
+        <tr>
+            <th>
+                ID
+            </th>
+
+            <th>
+                Tên người nhận
+            </th>
+            <th>
+                Địa chỉ
+            </th>
+            <th>
+                Trạng thái
+            </th>
+
+            <th>
+                Phone
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                trả hàng
+            </th>
+            <th>
+                Tổng tiền
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="OrderID">
+                    <a href="~/Admin/Order_Details/Index?idOrder=@item.OrderID"> @Html.DisplayFor(modelItem => item.OrderID)</a>
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.RecevierName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @if (item.Status == true)
+                    {
+                        <label>Đã giao</label>
+                    }
+                    else
+                    {
+                        if (item.Tralai == true)
+                        {
+                            <label>Đang giao</label>
+
+                        }
+                        else
+                        {
+                            <label class="status"><a href="#">Đang giao</a></label>
+                        }
+                    }
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @if (item.Tralai == true || item.Status == true)
+                    {
+                        if (item.Tralai == true)
+                        {
+                            @Html.CheckBoxFor(modelitem => item.Tralai, new { @class = "btn tralai", @disabled = true })
+                        }
+                        else
+                        {
+                            @Html.CheckBoxFor(modelitem => item.Tralai, new { @class = "btn", @disabled = true })
+                        }
+                    }
+                    else
+                    {
+                        @Html.CheckBoxFor(modelitem => item.Tralai, new { @class = "btn none_tralai" })
+                    }
+
+                </td>
+                <td>
+                    @item.TotalMoney.Value.ToString("0,00") vnđ
+                </td>
+                <td>
+                    @Html.ActionLink("Sửa", "Edit", new { id = item.OrderID }) |
+                    @Html.ActionLink("Xóa", "Delete", new { id = item.OrderID })
+                </td>
+            </tr>
+        }
+        <tr>
+            <td colspan="7"><span><a class="btn btn-primary" href="~/Admin/Orders">Refresh</a></span></td>
+            <td colspan="2" style="width:20%;"><span style="font:bold;font-size:15px;">Tổng:</span> @ViewBag.tongtien.ToString("0,00")  vnđ</td>
+        </tr>
+    </table>
+    @Html.PagedListPager(Model, (Page) => Url.Action(TempData["action"].ToString(), TempData["controller"].ToString(), new { Page, search = ViewBag.keysearch }))
+
+</div>
+<style>
+    .vung table tr {
+        width: 100%;
+    }
+</style>
+<link href="~/Content/SP_banchay.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-ui.js"></script>
+<script>
+    $(".none_tralai").click(function (e) {
+        e.preventDefault();
+        var id = $($(this).parent()).prevAll('.OrderID').children().text();
+        $.ajax({
+            url: "/Admin/Orders/Tralai",
+            data: { id: id },
+            cache: false,
+
+        });
+        $($(this).parent()).prevAll().children(".status").replaceWith(" <label>Đang giao</label>");
+        $(this).replaceWith('@Html.CheckBox("tralai", true,new { @disabled = true })');
+    });
+
+    $(".status").click(function (e) {
+        e.preventDefault();
+        var id = $($(this).parent()).prevAll('.OrderID').children().text();
+        $.ajax({
+            url: "/Admin/Orders/Status",
+            data: { id: id },
+            cache: false,
+
+        });
+        $(this).html('đã giao');
+        $($(this).parent()).nextAll().children(".none_tralai").attr("disabled", true);
+
+    });
+    $('.tralai').attr("checked", true);
+
+        $("#keysearch").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: "/Admin/Orders/AutocompleteKeysearch",
+                    type: "POST",
+                    dataType: "json",
+                    data: { Prefix: request.term },
+                    success: function (data) {
+                        response($.map(data, function (item) {
+                            return { label: item.OrderID, value: item.OrderID };
+                        }))
+
+                    }
+                })
+            },
+            messages: {
+                noResults: "", results: ""
+            }
+        });
+    function thaydoi() {
+        var dateDi = $("#dateDi").val();
+        var dateDen = $("#dateDen").val();
+        if (dateDi == "" || dateDen=="") {
+            return false;
+        }
+        var list = dateDi + "|"+dateDen;
+        
+        $.ajax({
+            url: "/Admin/Orders/Timkiem_Theongay",
+            type: "POST",
+            //dataType: "json",
+            data: {
+                ListDate: list
+            },
+            success: function (data) {
+                window.location = "/Admin/Orders/ChuyenTrang?data=" + data;
+
+            },
+            error: function (xhr, status, error) {
+                alert(xhr.responseText);
+                alert(status);
+                alert(error);
+            }
+
+        });
+    };
+</script>
+
+<style>
+    ul {
+        list-style: none;
+    }
+
+    .ui-autocomplete {
+        background-color: #fff;
+    }
+
+    .ui-menu {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+        background-color: #eceff1;
+        border-color: #eceff1;
+        color: #0d47a1;
+    }
+</style>

@@ -1,0 +1,235 @@
+﻿
+@{
+  
+    ViewBag.Title = "chi tiết";
+    Layout = "~/Areas/Admin/Views/Shared/Layout_Admin.cshtml";
+}
+@model WebBanHang1.Models.Products
+<div class="vung" style="margin-bottom:10%;">
+    <span style="float:left;"> <h2>sản phẩm @Model.ProductName:</h2></span>
+    <span style="float:right;line-height:normal">
+        @Html.ActionLink("Quay lại", "Redirect", "Admin/Quanlisanpham")
+    </span>
+    <script language="javascript" type="text/javascript">
+        function GetCity(_stateId) {
+            var a = '@Model.CategoryChildID';
+            var url = "/Admin/Quanlisanpham/DMC";
+            $.ajax({
+                url: url,
+                data: { id: _stateId },
+                cache: false,
+                success: function (data) {
+                    var markup = "";
+                    for (var x = 0; x < data.length; x++) {
+                        markup += "<option value=" + data[x].Value + "  >" + data[x].Text + "</option>";
+                    }
+                    $("#CategoryChildID").html(markup).show();
+                    $("#CategoryChildID").val(a);
+                },
+                error: function (reponse) {
+                    alert("error : " + reponse);
+                }
+            });
+
+        }
+    </script>
+    @using (Html.BeginForm("Sua", "Quanlisanpham", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+        <table class="table">
+
+            <tbody>
+                <tr>
+                    <th class="row">Danh mục</th>
+                    <td>
+                        @* @Html.DropDownListFor(x => x.Category_Childs.CategoryFatherID, ViewBag.CategoryChildID as SelectList, new { @class = "form-control", @required = true, @onchange = "javascript:GetCity(this.value);" })*@
+                        <select id="CategoryFatherID" required onchange="javascript:GetCity(this.value);" class="form-control">
+                            @foreach (WebBanHang1.Models.Category_Fathers option in ViewBag.DM)
+                            {
+                                <option value="@option.CategoryFatherID" @(option.CategoryFatherID == (ViewBag.DMC as WebBanHang1.Models.Category_Childs).CategoryFatherID ? "selected='selected'" : "")>@option.CategoryName</option>
+                            }
+                        </select>
+
+                    </td>
+                </tr>
+
+                <script>
+
+                    $("#CategoryFatherID")
+                        .change();
+
+                </script>
+                <tr>
+                    <th class="row">Loại</th>
+                    <td>
+                       
+                        @Html.DropDownListFor(x => x.CategoryChildID, new List<SelectListItem>(), new { @class = "form-control" })
+
+                    </td>
+                </tr>
+                <tr>
+                    <th class="row">ID</th>
+                    <td>
+                        @Html.DisplayFor(x => x.ProductID)
+                        @Html.HiddenFor(x => x.ProductID)
+                        @Html.HiddenFor(x => x.CategoryChildID)
+                    </td>
+                </tr>
+                <tr>
+                    <th class="row">Tên</th>
+                    <td>@Html.TextBoxFor(x => x.ProductName, new { @class = "form-control", @required = true, pattern = @".*\S+.*", @title = "không để trống" })</td>
+                </tr>
+                <tr>
+                    <th class="row">Hình minh họa</th>
+                    <td>
+
+                        <span>
+                            <button type="button" hidden onclick="$('#Picture').trigger('click')" class="btn"> <i class="fa fa-camera fa-4x"></i><i>+</i></button>
+                            <input type="file" hidden onchange="readURL(this);" name="Picture" id="Picture" accept="image/*" />
+                            <img style="max-width:10%;max-height:100%;position:relative;" src="~/Images/@Model.Picture" />
+                            <span onclick="back(this);" style="position:absolute;" class="cl"> <i class="fa fa-close"></i></span>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="row">Hình khác</th>
+                    <td>
+
+
+
+                        @if (Model.Picture1 != null)
+                        {<span>
+                                <button type="button" hidden onclick="$('#Picture1').trigger('click')" class="btn"> <i class="fa fa-camera fa-4x"></i><i>+</i></button>
+
+                                <input type="file" hidden onchange="readURL(this);" name="Picture1" id="Picture1" accept="image/*" />
+                                <img src="~/Images/@Model.Picture1" style="max-width:10%;max-height:100%;position:relative;" />
+                                <span onclick="back(this);" style="position:absolute;" class="cl"> <i class="fa fa-close"></i></span>
+                            </span>
+                        }
+                        else
+                        {
+
+                            <button type="button" onclick="$('#Picture1').trigger('click')" class="btn"> <i class="fa fa-camera fa-4x"></i><i>+</i></button>
+                            <input type="file" hidden onchange="readURL(this);" name="Picture1" id="Picture1" accept="image/*" />
+                            <img style="max-width:10%;max-height:100%;position:relative;" />
+                            <span onclick="back(this);" style="position:absolute;" class="cl" hidden> <i class="fa fa-close"></i></span>
+
+                        } @if (Model.Picture2 != null)
+                        {
+                            <button type="button" hidden style="margin-left:3%" onclick="$('#Picture2').trigger('click')" class="btn"> <i class="fa fa-camera fa-4x"></i><i>+</i></button>
+                            <input type="file" hidden onchange="readURL(this);" name="Picture2" id="Picture2" accept="image/*" />
+                            <img src="~/Images/@Model.Picture2" style="max-width:10%;max-height:100%;position:relative;margin-left:3%" />
+                            <span onclick="back(this);" style="position:absolute;" class="cl"> <i class="fa fa-close"></i></span>
+                        }
+                        else
+                        {
+
+                            <button type="button" style="margin-left:3%" onclick="$('#Picture2').trigger('click')" class="btn"> <i class="fa fa-camera fa-4x"></i><i>+</i></button>
+                            <input type="file" hidden onchange="readURL(this);" name="Picture2" id="Picture2" accept="image/*" />
+                            <img style="max-width:10%;max-height:100%;position:relative;margin-left:3%" />
+                            <span onclick="back(this);" style="position:absolute;" class="cl" hidden> <i class="fa fa-close"></i></span>
+
+                        } @if (Model.Picture3 != null)
+                        {
+                            <button type="button" hidden style="margin-left:3%" onclick="$('#Picture3').trigger('click')" class="btn"> <i class="fa fa-camera fa-4x"></i><i>+</i></button>
+                            <input type="file" hidden onchange="readURL(this);" name="Picture3" id="Picture3" accept="image/*" />
+                            <img src="~/Images/@Model.Picture3" style="max-width:10%;max-height:100%;position:relative;margin-left:3%" />
+                            <span onclick="back(this);" style="position:absolute;" class="cl"> <i class="fa fa-close"></i></span>
+                        }
+                        else
+                        {
+
+
+                            <button type="button" style="margin-left:3%;" onclick="$('#Picture3').trigger('click')" class="btn"> <i class="fa fa-camera fa-4x"></i><i>+</i></button>
+                            <input type="file" hidden onchange="readURL(this);" name="Picture3" id="Picture3" accept="image/*" />
+                            <img style="max-width:10%;max-height:100%;position:relative;margin-left:3%" />
+                            <span onclick="back(this);" style="position:absolute;" class="cl" hidden> <i class="fa fa-close"></i></span>
+
+                        } @if (Model.Picture4 != null)
+                        {
+                            <button type="button" hidden style="margin-left:3%" onclick="$('#Picture4').trigger('click')" class="btn"> <i class="fa fa-camera fa-4x"></i><i>+</i></button>
+                            <input type="file" hidden onchange="readURL(this);" name="Picture4" id="Picture4" accept="image/*" />
+                            <img src="~/Images/@Model.Picture4" style="max-width:10%;max-height:100%;position:relative;margin-left:3%" />
+                            <span onclick="back(this);" style="position:absolute;" class="cl"> <i class="fa fa-close"></i></span>
+                        }
+                        else
+                        {
+                            <button type="button" style="margin-left:3%" onclick="$('#Picture4').trigger('click')" class="btn"> <i class="fa fa-camera fa-4x"></i><i>+</i></button>
+                            <input type="file" hidden onchange="readURL(this);" name="Picture4" id="Picture4" accept="image/*" />
+                            <img style="max-width:10%;max-height:100%;position:relative;margin-left:3%" />
+                            <span onclick="back(this);" style="position:absolute;" class="cl" hidden> <i class="fa fa-close"></i></span>
+                        }
+                    </td>
+                </tr>
+                <tr>
+                    <th class="row">Giá</th>
+                    <td>@Html.TextBoxFor(x => x.UnitPrice, new { @class = "form-control", type = "number", min = "0", @required = true, @title = "không để trống" })</td>
+                </tr>
+                <tr>
+                    <th class="row">Giá hiện tại</th>
+                    <td>@Html.TextBoxFor(x => x.PricePresent, new { @class = "form-control" })</td>
+                </tr>
+                <tr>
+                    <th class="row">Số Lượng</th>
+                    <td>@Html.TextBoxFor(x => x.SoLuongTrongKho, new { @class = "SoLuongTrongKho form-control", type = "number", min = "1" })</td>
+
+                </tr>
+
+                <tr>
+                    <th class="row">Thông tin</th>
+                    <td>
+                        @Html.TextAreaFor(x => x.InfoDetail, new { @required = true, @id = "aa" })
+
+                        <script src="~/Areas/Admin/ckeditor/ckeditor.js"></script>
+
+                        <script>
+
+                            CKEDITOR.replace("aa");
+
+                        </script>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+        <input type="submit" value="Lưu" class="btn luu btn-default" />
+        <script type="text/javascript">
+
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $(input).next()
+                            .attr('src', e.target.result).attr('hidden', false);
+                        $($(input).next()).next().attr('hidden', false);
+                        $(input).prev().attr('hidden', true);
+                    };
+
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+            function back(input) {
+                $(input).prev().attr('src', '')
+                $(input).attr('hidden', true);
+                $($(input).prev()).prev().val(null);
+                $($($(input).prev()).prev()).prev().attr('hidden', false);
+            }
+            $('#SoLuongTrongKho').blur(function () {
+                if ($(this).val() < 1) {
+                    $(this).val(1);
+                }
+            });
+            $('#UnitPrice').blur(function () {
+                if ($(this).val() < $('#PricePresent').val()) {
+                    $(this).val(parseFloat($('#PricePresent').val()));
+                }
+            });
+            $('#PricePresent').blur(function () {
+                if ($(this).val() > $('#PricePresent').val() || $(this).val() < 1) {
+                    $(this).val(1);
+                }
+            });
+        </script>
+    }
+</div>
+

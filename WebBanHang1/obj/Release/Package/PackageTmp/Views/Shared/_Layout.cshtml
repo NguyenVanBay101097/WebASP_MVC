@@ -1,0 +1,302 @@
+﻿
+<!DOCTYPE HTML>
+<head>
+    <title>@ViewBag.title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="~/Scripts/jquery-1.7.2.min.js"></script>
+
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/slider.css" rel="stylesheet" />
+    <link href="~/~/Images/sale.png" rel="shortcut icon" />
+    <script src="~/Scripts/move-top.js"></script>
+    <script src="~/Scripts/jquery-ui.js"></script>
+    <link href="~/Content/jquery-ui.css" rel="stylesheet" />
+    <script src="~/Scripts/easing.js"></script>
+    <script src="~/Scripts/startstop-slider.js"></script>
+    <script src="~/Scripts/sweetalert2.all.js"></script>
+
+    <style>
+        .navbar-fixed-top {
+            position: fixed;
+            margin: auto;
+            width: 80%;
+        }
+
+        .navbar-fixed-top {
+            top: 0;
+            z-index: 1030;
+        }
+    </style>
+
+
+</head>
+<body>
+    
+    <div class="wrap">
+        <div class="header">
+            <div class="headertop_desc">
+                <div class="call">
+                    <p><span>Liên hệ</span> call us: <span class="number">01657142225</span></span></p>
+                </div>
+                <div class="account_desc">
+                    <ul>
+
+                        @{
+                            if (Session["customer"] != null)
+                            {
+                                <style>
+                                    .account_desc .log {
+                                        border-left: none;
+                                        display: none;
+                                    }
+                                </style>
+                                var s = (WebBanHang1.Models.Customers)Session["customer"];
+                                <li><a href="~/Taikhoan">@s.CustomerName</a></li>
+                            }
+
+                            <li class="log"><a href="~/Trangchu/Dangki">Đăng kí</a></li>
+                            <li class="log"><a href="~/Trangchu/Dangnhap">Đăng nhập</a></li>
+                            <li>
+                                <a href="~/Gio/Kiemtradonhang">Kiểm tra đơn hàng</a>
+
+                            </li>
+                            <li><a href="~/Taikhoan">Tài khoản</a></li>
+                            if (Session["customer"] != null)
+                            {
+                                <li><a href="~/Trangchu/Dangxuat">Đăng xuất</a></li>
+                            }
+                        }
+                    </ul>
+
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="header_top">
+                <div class="logo">
+                    <a href="~/Trangchu/"><img src="~/Images/logo.png" alt="" /></a>
+                </div>
+                <div class="cart">
+                    <p>
+
+                        Welcome to THIEN-THU <span><a href="~/Gio"><img title="xem giỏ hàng" alt="xem giỏ hàng" src="~/Images/cart.png" /></a>:</span>
+                        @{ WebBanHang1.Models.Gio gio = Session["gio"] as WebBanHang1.Models.Gio; double tongtien = 0;
+                            <div id="dd" class="wrapper-dropdown-2">
+                                @gio.DSSP.Count item(s) - $@{foreach (var item in gio.DSSP)
+                                    {
+                                        tongtien += item.ThanhTien;
+                                    }
+                                    <span>@tongtien.ToString("0,00") đ</span>
+                                }
+                                <ul style="z-index:200;background-color:#FCFCFC;" class="dropdown">
+                                    <li class="li-gio" style="overflow:auto;">@Html.Action("Chitiet", "Gio")</li>
+                                    <li class="li-gio"><a href="~/Gio">Xem giỏ hàng</a></li>
+                                </ul>
+                                <style>
+                                    .wrapper-dropdown-2 .dropdown .li-gio a:hover {
+                                        color: orangered;
+                                        background-color: #fafafa;
+                                    }
+
+                                    .wrapper-dropdown-2 .dropdown li:hover a {
+                                        color: #551A8B;
+                                        background-color: #fafafa;
+                                    }
+
+                                    .alert.success {
+                                        padding: 0.2%;
+                                        color: white;
+                                        background-color: #4CAF50;
+                                    }
+                                </style>
+                                <script>
+                                    $('.txtsoluong').attr('readonly', true);
+                                    setTimeout(function () {
+                                        $('.success').fadeOut('slow');
+                                    }, 1000);
+                                </script>
+                            </div>
+                        }
+                    </p>
+                    @if (TempData["them"] != null)
+                    {
+
+
+                    <div class="alert success">
+                        <a href="#" class="closebtn">&times;</a>
+                        <strong>Success!</strong> Đã thêm vào giỏ hàng!
+                    </div>
+                                }
+                </div>
+                <script type="text/javascript">
+                    function DropDown(el) {
+                                    this.dd = el;
+                                    this.initEvents();
+                                }
+                                DropDown.prototype = {
+                                    initEvents: function () {
+                                        var obj = this;
+
+                                        obj.dd.on('click', function (event) {
+                                $(this).toggleClass('active');
+
+                                event.stopPropagation();
+                            });
+                        }
+                    }
+
+                    $(function () {
+
+                        var dd = new DropDown($('#dd'));
+
+                        $(document).click(function () {
+                            // all dropdowns
+                            $('.wrapper-dropdown-2').removeClass('active');
+                    });
+
+                    });
+
+                </script>
+                <div class="clear"></div>
+            </div>
+            <div class="header_bottom">
+                <div class="menu">
+                    <ul>
+                        <li class="active"><a href="~/Trangchu">Trang Chủ</a></li>
+                        <li><a href="~/Danhsachsanpham/">Sản Phẩm</a></li>
+                        <li><a href="~/Trangchu/khuyenmai">Khuyến Mãi</a></li>
+                        <li><a href="~/Gioithieu">Giới Thiệu</a></li>
+                        <li><a href="~/Lienlac">Liên Lạc</a></li>
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+                <div class="search_box">
+                    @using (Html.BeginForm("Timkiem", "Trangchu", FormMethod.Get))
+                    {
+
+                        <input type="text" id="keysearch" name="keysearch" value="@ViewBag.keysearch" onfocus="this.value = '';" @*onblur="if (this.value == '') {this.value = 'Search';}"*@><input type="submit" value="">
+                    }
+
+                </div>
+                <div class="clear"></div>
+            </div>
+
+        </div>
+        @RenderBody()
+
+    </div>
+    <div class="footer">
+        <div class="wrap">
+            <div class="section group">
+                <div class="col_1_of_4 span_1_of_4">
+                    <h4>Thông tin </h4>
+                    <ul>
+                        <li><a href="~/Trangchu/gioithieu">Giới thiệu</a></li>
+                        <li><a href="~/Trangchu/lienlac">Dịch vụ khách hàng</a></li>
+                        <li><a href="#" id="tk">Tìm kiếm</a></li>
+
+
+                        <li><a href="~/Trangchu/lienlac">Liên Lạc</a></li>
+                    </ul>
+                    <script>
+                        $('#tk').click(function (e) {
+                            e.preventDefault();
+                            $("#keysearch").focus();
+                        });
+                    </script>
+                </div>
+                <div class="col_1_of_4 span_1_of_4">
+                    <h4>Why buy from us</h4>
+                    <ul>
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Dịch vụ khách hàng</a></li>
+                        <li><a href="#">Tìm kiếm</a></li>
+
+
+                        <li><a href="#">Liên Lạc</a></li>
+                    </ul>
+                </div>
+                <div class="col_1_of_4 span_1_of_4">
+                    <h4>Tài khoản của tôi</h4>
+                    <ul>
+                        <li><a href="~/Trangchu/Dangnhap">Đăng nhập</a></li>
+                        <li><a href="/Gio/Kiemtradonhang">Danh sách order</a></li>
+                        <li><a href="/Gio/Kiemtradonhang">Order hiện tại</a></li>
+                        <li><a href="/Trangchu/lienlac">Help</a></li>
+                        <li><a href="/trangchu/dangxuat">Đăng xuất</a></li>
+                    </ul>
+                </div>
+                <div class="col_1_of_4 span_1_of_4">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><span>01657142225</span></li>
+                        <li><span>01657142225</span></li>
+                    </ul>
+                    <div class="social-icons">
+                        <h4>Theo dõi chúng tôi</h4>
+                        <ul>
+                            <li><a href="https://www.facebook.com/bay.supermen" target="_blank"><img src="~/Images/facebook.png" alt="" /></a></li>
+                            <li><a href="#" target="_blank"><img src="~/Images/twitter.png" alt="" /></a></li>
+                            <li><a href="#" target="_blank"><img src="~/Images/skype.png" alt="" /> </a></li>
+                            <li><a href="#" target="_blank"> <img src="~/Images/dribbble.png" alt="" /></a></li>
+                            <li><a href="#" target="_blank"> <img src="~/Images/linkedin.png" alt="" /></a></li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy_right">
+            <p>&copy; 2018 home_shoppe. All rights reserved | Design by <a href="https://www.facebook.com/bay.supermen">Nguyễn văn Bảy</a></p>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $().UItoTop({ easingType: 'easeOutQuart' });
+
+        });
+    </script>
+    <a href="#" id="toTop"><span id="toTopHover"> </span></a>
+</body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#keysearch").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: "/Trangchu/AutocompleteKeysearch",
+                    type: "POST",
+                    dataType: "json",
+                    data: { Prefix: request.term },
+                    success: function (data) {
+                        response($.map(data, function (item) {
+                            return { label: item.ProductName, value: item.ProductName };
+                        }))
+
+                    }
+                })
+            },
+            messages: {
+                noResults: "", results: ""
+            }
+        });
+    })
+</script>
+<script>
+    $(document).ready(function () {
+        var lastScrollTop = $('.header').height();
+        $(window).scroll(function () {
+            var currentScrollTop = $(this).scrollTop();
+            if (currentScrollTop > lastScrollTop) {
+                $('.header_bottom').addClass("navbar-fixed-top");
+            }
+            else {
+                $('.header_bottom').removeClass("navbar-fixed-top");
+
+            }
+        });
+    });
+</script>
+
+@RenderSection("jsFooter", required: false)
+    </html>
+

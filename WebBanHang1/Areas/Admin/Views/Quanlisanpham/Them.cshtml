@@ -1,0 +1,176 @@
+﻿
+@{
+    ViewBag.Title = "Them";
+    Layout = "~/Areas/Admin/Views/Shared/Layout_Admin.cshtml";
+}
+@model WebBanHang1.Models.Products
+
+<div class="vung" style="margin-bottom:10%;">
+    <span style="float:left;"> <h2>Thêm sản phẩm mới</h2></span>
+    <span style="float:right;line-height:normal">
+        @Html.ActionLink("Quay lại", "Redirect", "Quanlisanpham")
+    </span>
+    @using (Html.BeginForm("Them", "Quanlisanpham", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <script language="javascript" type="text/javascript">
+            function GetCity(_stateId) {
+                //var procemessage = "<option value='0'> Please wait...</option>";
+                //$("#ddlcity").html(procemessage).show();
+                var url = "/Admin/Quanlisanpham/DMC";
+
+                $.ajax({
+                    url: url,
+                    data: { id: _stateId },
+                    cache: false,
+                    success: function (data) {
+                        var markup = "";
+                        for (var x = 0; x < data.length; x++) {
+                            markup += "<option value=" + data[x].Value + ">" + data[x].Text + "</option>";
+                        }
+                        $("#CategoryChildID").html(markup).show();
+                        $("#CategoryChildID").removeAttr("disabled");
+                    },
+                    error: function (reponse) {
+                        alert("error : " + reponse);
+                    }
+                });
+
+            }
+        </script>
+        <table class="table">
+
+            <tbody>
+                <tr>
+                    <th class="row">Danh mục</th>
+                    <td>
+                        @Html.DropDownList("CategoryFatherID", ViewBag.CategoryChildID as SelectList, "--Chọn danh mục--", new { @class = "form-control", @required = true, @onchange = "javascript:GetCity(this.value);" })
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <th class="row">Loại</th>
+                    <td>
+                        @Html.DropDownListFor(model => model.CategoryChildID, new List<SelectListItem>(), "--- Chọn loại ---", new { @class = "form-control", disabled = "disabled" })
+                        @*<select id="CategoryChildID" name="CategoryChildID" style="width: 200px"></select>*@
+                    </td>
+                </tr>
+                <tr>
+                    <th class="row">Tên</th>
+                    <td>@Html.TextBoxFor(model => model.ProductName, new { @class = "form-control", @required = true, pattern = @".*\S+.*", @title = "không để trống" })</td>
+                </tr>
+                <tr>
+                    <th class="row">Hình minh họa</th>
+                    <td>
+                        <span>
+                            <button type="button" title="không được để trống" onclick="$('#Picture').trigger('click')" class="btn"> <i class="fa fa-camera fa-4x"></i><i>+</i></button>
+                            <input type="file" hidden onchange="readURL(this);" name="Picture" id="Picture" required accept="image/*" />
+                            <img style="max-width:10%;max-height:100%;position:relative;" />
+                            <span hidden onclick="back(this);" style="position:absolute;" class="cl"> <i class="fa fa-close"></i></span>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="row">Hình khác</th>
+                    <td>
+
+                        <button type="button" onclick="$('#Picture1').trigger('click')" class="btn"> <i class="fa fa-camera fa-4x"></i><i>+</i></button>
+                        <input type="file" hidden onchange="readURL(this);" name="Picture1" id="Picture1" accept="image/*" />
+                        <img style="max-width:10%;max-height:100%;position:relative;" />
+                        <span onclick="back(this);" style="position:absolute;" class="cl" hidden> <i class="fa fa-close"></i></span>
+
+                        <button type="button" style="margin-left:3%" onclick="$('#Picture2').trigger('click')" class="btn"> <i class="fa fa-camera fa-4x"></i><i>+</i></button>
+                        <input type="file" hidden onchange="readURL(this);" name="Picture2" id="Picture2" accept="image/*" />
+                        <img style="max-width:10%;max-height:100%;position:relative;margin-left:3%" />
+                        <span onclick="back(this);" style="position:absolute;" class="cl" hidden> <i class="fa fa-close"></i></span>
+
+                        <button type="button" style="margin-left:3%;" onclick="$('#Picture3').trigger('click')" class="btn"> <i class="fa fa-camera fa-4x"></i><i>+</i></button>
+                        <input type="file" hidden onchange="readURL(this);" name="Picture3" id="Picture3" accept="image/*" />
+                        <img style="max-width:10%;max-height:100%;position:relative;margin-left:3%" />
+                        <span onclick="back(this);" style="position:absolute;" class="cl" hidden> <i class="fa fa-close"></i></span>
+                        <button type="button" style="margin-left:3%" onclick="$('#Picture4').trigger('click')" class="btn"> <i class="fa fa-camera fa-4x"></i><i>+</i></button>
+                        <input type="file" hidden onchange="readURL(this);" name="Picture4" id="Picture4" accept="image/*" />
+                        <img style="max-width:10%;max-height:100%;position:relative;margin-left:3%" />
+                        <span onclick="back(this);" style="position:absolute;" class="cl" hidden> <i class="fa fa-close"></i></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="row">Giá</th>
+                    <td>@Html.TextBoxFor(model => model.UnitPrice, new { @class = "form-control", type = "number", min = "0", @required = true, @title = "không để trống" })</td>
+                </tr>
+                <tr>
+                    <th class="row">Giá hiện tại</th>
+                    <td>@Html.TextBoxFor(model => model.PricePresent, new { @class = "form-control", type = "number", min = "0", @required = true, @title = "không để trống" })</td>
+                </tr>
+                <tr>
+                    <th class="row">Số Lượng</th>
+                    <td>@Html.TextBoxFor(model => model.SoLuongTrongKho, new { @class = "SoLuongTrongKho form-control", type = "number", min = "1" })</td>
+
+                </tr>
+
+                <tr>
+                    <th class="row">Thông tin</th>
+                    <td>
+                        @Html.TextAreaFor(model => model.InfoDetail, new { @required = true, @id = "aa" })
+
+                        <script src="~/Areas/Admin/ckeditor/ckeditor.js"></script>
+
+                        <script>
+
+                            CKEDITOR.replace("aa");
+
+                        </script>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+        <input type="submit" value="Thêm"  class="btn them btn-info" />
+        <script type="text/javascript">
+            $(".them").click(function (e) {
+                if ($('#Picture').val() == '') {
+                    e.preventDefault();
+
+                    swal('chưa chọn ảnh minh họa!');
+                }
+            });
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $(input).next()
+                            .attr('src', e.target.result).attr('hidden', false);
+                        $($(input).next()).next().attr('hidden', false);
+                        $(input).prev().attr('hidden', true);
+                    };
+
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+            function back(input) {
+                $(input).prev().attr('src', '')
+                $(input).attr('hidden', true);
+                $($(input).prev()).prev().val(null);
+                $($($(input).prev()).prev()).prev().attr('hidden', false);
+            }
+            $('#SoLuongTrongKho').blur(function () {
+                if ($(this).val() < 1) {
+                    $(this).val(1);
+                }
+            });
+            $('#UnitPrice').blur(function () {
+                if ($(this).val() < $('#PricePresent').val()) {
+                    $(this).val(parseFloat($('#PricePresent').val()));
+                }
+            });
+            $('#PricePresent').blur(function () {
+                if ($(this).val() > $('#PricePresent').val() || $(this).val() < 1) {
+                    $(this).val(1);
+                }
+            });
+        </script>
+    }
+</div>
+
+<script src="~/Scripts/sweetalert2.all.js"></script>

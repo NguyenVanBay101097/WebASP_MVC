@@ -1,0 +1,45 @@
+﻿@model IEnumerable<WebBanHang1.Models.Category_Childs>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/Layout_Admin.cshtml";
+}
+
+@*<h2>Danh sách Loại của @(Model.Count() > 0 ? Model.ElementAt(0)..ToString() : "")</h2>*@
+<h2>Danh sách Loại của @ViewBag.tencha</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới", "Create", new { idcha = (Model.Count() != 0) ? Model.ElementAt(0).CategoryFatherID : "0" }, new { @class = "btn btn-primary" })
+</p>
+<table class="table table-striped">
+    <tr>
+        <th>ID</th>
+        <th>
+            Tên danh mục
+        </th>
+        <th>
+            Tên loại
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.CategoryChildID</td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category_Fathers.CategoryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryName)
+            </td>
+            <td>
+                @Html.ActionLink("Sửa", "Edit", new { id = item.CategoryChildID }) |
+                @Html.ActionLink("Chi tiết", "Details", new { id = item.CategoryChildID }) |
+                @Html.ActionLink("Xóa", "Delete", new { id = item.CategoryChildID })
+            </td>
+        </tr>
+    }
+
+</table>
+@Html.ActionLink("Trở về Danh Mục", "Index", "Category_Fathers")

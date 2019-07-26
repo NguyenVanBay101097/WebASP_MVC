@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "trang sản phẩm";
+    TempData["action"] = "Index";
+    TempData["controller"] = "Sanpham";
+}
+@if (TempData["giotrong"] != null)
+{
+    @Html.Raw(TempData["giotrong"])
+}
+<div class="content_top">
+    <div class="heading">
+        <h3>Danh sách sản phẩm</h3>
+    </div>
+   
+    <div class="clear"></div>
+</div>
+@Html.Action("Partial_Sanphammoi", "Trangchu", new { soluong = 0 })

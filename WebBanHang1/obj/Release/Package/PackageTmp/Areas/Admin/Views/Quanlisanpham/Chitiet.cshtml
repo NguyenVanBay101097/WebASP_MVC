@@ -1,0 +1,79 @@
+﻿@model WebBanHang1.Models.Products
+
+@{
+    ViewBag.Title = "Chitiet";
+    Layout = "~/Areas/Admin/Views/Shared/Layout_Admin.cshtml";
+}
+
+
+
+<div class="vung" style="margin-bottom:10%;">
+    <span style="float:left;"> <h2>sản phẩm @Model.ProductName:</h2></span>
+    <span style="float:right;line-height:normal">
+        @Html.ActionLink("Sửa", "Sua", new { id = Model.ProductID }) |
+        @Html.ActionLink("Quay lại", "Redirect", "Admin/Quanlisanpham")
+    </span>
+    @using (Html.BeginForm("", "", FormMethod.Get))
+    {
+
+
+        <table class="table">
+
+            <tbody>
+                <tr>
+                    <th class="row">ID</th>
+                    <td>
+                        <label id="ProductID" name="ProductID">@Model.ProductID</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="row">Tên</th>
+                    <td>@Html.DisplayFor(x => x.ProductName, new { @class = "form-control" })</td>
+                </tr>
+                <tr>
+                    <th class="row">Hình</th>
+                    <td>
+                        @if (Model.Picture != null)
+                        {
+                            <img style="max-width:10%;max-height:100%;" src="~/Images/@Model.Picture" />
+                        }
+                        @if (Model.Picture1 != null)
+                        {
+                            <img style="max-width:10%;max-height:100%;" src="~/Images/@Model.Picture1" />
+                        } @if (Model.Picture2 != null)
+                        {
+                            <img style="max-width:10%;max-height:100%;" src="~/Images/@Model.Picture2" />
+                        } @if (Model.Picture3 != null)
+                        {
+                            <img style="max-width:10%;max-height:100%;" src="~/Images/@Model.Picture3" />
+                        } @if (Model.Picture4 != null)
+                        {
+                            <img style="max-width:10%;max-height:100%;" src="~/Images/@Model.Picture4" />
+                        }
+                    </td>
+                </tr>
+                <tr>
+                    <th class="row">Giá</th>
+                    <td>@Html.DisplayFor(x => x.UnitPrice, new { @class = "form-control" })</td>
+                </tr>
+                <tr>
+                    <th class="row">Giá hiện tại</th>
+                    <td>@Html.DisplayFor(x => x.PricePresent, new { @class = "form-control" })</td>
+                </tr>
+                <tr>
+                    <th class="row">Số Lượng</th>
+                    <td>@Html.DisplayFor(x => x.SoLuongTrongKho, new { @class = "form-control", type = "number", min = "1" })</td>
+
+                </tr>
+                <tr>
+                    <th class="row">Thông tin</th>
+                    <td>@Html.Raw(Model.InfoDetail)</td>
+
+                </tr>
+            </tbody>
+        </table>
+
+    }
+</div>
+
+

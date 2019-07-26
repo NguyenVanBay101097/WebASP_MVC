@@ -1,0 +1,78 @@
+﻿@model List<WebBanHang1.Models.Category_Fathers>
+<div class="header_slide">
+    <div class="header_bottom_left">
+        <div class="categories">
+            <ul>
+                @foreach (var item in Model)
+                {
+                    <li>
+                        <a href="~/ChungLoai/@item.CategoryName-@item.CategoryFatherID">@item.CategoryName</a>
+                        <ul class="sub_ul">
+                            @foreach (WebBanHang1.Models.Category_Childs dmc in item.Category_Childs)
+                            {
+                                <li><a href="~/Loai/@dmc.CategoryName-@dmc.CategoryChildID">@dmc.CategoryName</a></li>
+                            }
+
+                        </ul>
+                    </li>
+
+                }
+            </ul>
+        </div>
+    </div>
+    <div class="header_bottom_right">
+        <div class="slider">
+            <div id="slider">
+                <div id="mover">
+                    <div id="slide-1" class="slide">
+                        <div class="slider-img">
+                            <a  href="#"><img src="~/Images/slide1.jpg" alt="learn more" /></a>
+                        </div>
+                        <div class="slider-text">
+                            <h1>Guitar-Piano-Organ<br><span>SALE</span></h1>
+                            <h2>UPTo 20% OFF</h2>
+                            <div class="features_list">
+                                <h4>địa chỉ: 16/5 đoàn thị liên, p.phú lợi, tp. Thủ dầu một</h4>
+                            </div>
+                            <a href="/Danhsachsanpham" class="button">buy Now</a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                   
+                    <div class="slide">
+                        <div class="slider-text">
+                            <h1>Guitar-Piano-Organ<br><span>SALE</span></h1>
+                            <h2>UPTo 20% OFF</h2>
+                            <div class="features_list">
+                                <h4>địa chỉ: 16/5 đoàn thị liên, p.phú lợi, tp. Thủ dầu một</h4>
+                            </div>
+                            <a href="/Danhsachsanpham" class="button">buy Now</a>
+                        </div>
+                        <div class="slider-img">
+                            <a href="#"><img src="~/Images/slide2.jpg" alt="learn more" /></a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="slide">
+                        <div class="slider-img">
+                            <a href="#"><img src="~/Images/slide3.jpg" alt="learn more" /></a>
+                            <a href="#"><img src="~/Images/slide4.jpg" alt="learn more" /></a>
+                        </div>
+                        <div class="slider-text">
+                            <h1>Guitar-Piano-Organ<br><span>SALE</span></h1>
+                            <h2>UPTo 20% OFF</h2>
+                            <div class="features_list">
+                                <h4>địa chỉ: 16/5 đoàn thị liên, p.phú lợi, tp. Thủ dầu một</h4>
+                            </div>
+                            <a href="/Danhsachsanpham" class="button">buy Now</a>
+                        </div>
+
+                    </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+    <div class="clear"></div>
+    </div>

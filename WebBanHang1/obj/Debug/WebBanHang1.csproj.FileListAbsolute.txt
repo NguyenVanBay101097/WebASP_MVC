@@ -1,0 +1,701 @@
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\ApplicationInsights.config
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\WebBanHang1.dll.config
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\WebBanHang1.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\WebBanHang1.pdb
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\csc.exe
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\csc.exe.config
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\csc.rsp
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\csi.exe
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\csi.exe.config
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\csi.rsp
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\System.AppContext.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\System.Collections.Immutable.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\System.Console.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\System.Diagnostics.Process.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\System.IO.Compression.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\System.IO.FileSystem.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\System.IO.Pipes.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\System.Reflection.Metadata.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\System.Security.AccessControl.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\System.Security.Claims.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\System.Security.Principal.Windows.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\System.Threading.Thread.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\System.ValueTuple.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\System.Xml.XmlDocument.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\System.Xml.XPath.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\vbc.exe
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\vbc.exe.config
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\vbc.rsp
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\VBCSCompiler.exe
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\roslyn\VBCSCompiler.exe.config
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Antlr3.Runtime.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AI.Agent.Intercept.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AI.DependencyCollector.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AI.Web.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AI.WindowsServer.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.ApplicationInsights.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Web.Infrastructure.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Newtonsoft.Json.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Web.Helpers.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Web.Mvc.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Web.Optimization.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Web.Razor.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Web.WebPages.Deployment.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Web.WebPages.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Web.WebPages.Razor.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\WebGrease.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Web.Helpers.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Web.Mvc.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Web.Optimization.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Web.Razor.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Web.WebPages.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Web.WebPages.Deployment.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Web.WebPages.Razor.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Antlr3.Runtime.pdb
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Newtonsoft.Json.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.ApplicationInsights.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AI.DependencyCollector.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AI.WindowsServer.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AI.Web.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\obj\Debug\WebBanHang1.csprojResolveAssemblyReference.cache
+D:\C#\MVC\WebBanHang1\WebBanHang1\obj\Debug\WebBanHang1.csproj.CoreCompileInputs.cache
+D:\C#\MVC\WebBanHang1\WebBanHang1\obj\Debug\WebBanHang1.csproj.CopyComplete
+D:\C#\MVC\WebBanHang1\WebBanHang1\obj\Debug\WebBanHang1.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\obj\Debug\WebBanHang1.pdb
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\EntityFramework.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\EntityFramework.SqlServer.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\EntityFramework.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\EntityFramework.SqlServer.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\PagedList.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\PagedList.Mvc.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\PagedList.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\PagedList.Mvc.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Win32.Primitives.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\netstandard.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.AppContext.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Collections.Concurrent.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Collections.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Collections.NonGeneric.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Collections.Specialized.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.ComponentModel.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.ComponentModel.EventBasedAsync.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.ComponentModel.Primitives.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.ComponentModel.TypeConverter.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Console.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Data.Common.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Diagnostics.Contracts.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Diagnostics.Debug.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Diagnostics.FileVersionInfo.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Diagnostics.Process.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Diagnostics.StackTrace.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Diagnostics.TextWriterTraceListener.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Diagnostics.Tools.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Diagnostics.TraceSource.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Diagnostics.Tracing.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Drawing.Primitives.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Dynamic.Runtime.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Globalization.Calendars.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Globalization.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Globalization.Extensions.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.IO.Compression.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.IO.Compression.ZipFile.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.IO.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.IO.FileSystem.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.IO.FileSystem.DriveInfo.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.IO.FileSystem.Primitives.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.IO.FileSystem.Watcher.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.IO.IsolatedStorage.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.IO.MemoryMappedFiles.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.IO.Pipes.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.IO.UnmanagedMemoryStream.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Linq.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Linq.Expressions.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Linq.Parallel.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Linq.Queryable.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Net.Http.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Net.NameResolution.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Net.NetworkInformation.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Net.Ping.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Net.Primitives.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Net.Requests.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Net.Security.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Net.Sockets.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Net.WebHeaderCollection.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Net.WebSockets.Client.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Net.WebSockets.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.ObjectModel.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Reflection.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Reflection.Extensions.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Reflection.Primitives.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Resources.Reader.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Resources.ResourceManager.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Resources.Writer.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Runtime.CompilerServices.VisualC.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Runtime.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Runtime.Extensions.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Runtime.Handles.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Runtime.InteropServices.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Runtime.Numerics.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Runtime.Serialization.Formatters.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Runtime.Serialization.Json.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Runtime.Serialization.Primitives.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Runtime.Serialization.Xml.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Security.Claims.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Security.Cryptography.Algorithms.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Security.Cryptography.Csp.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Security.Cryptography.Encoding.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Security.Cryptography.Primitives.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Security.Cryptography.X509Certificates.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Security.Principal.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Security.SecureString.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Text.Encoding.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Text.Encoding.Extensions.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Text.RegularExpressions.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Threading.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Threading.Overlapped.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Threading.Tasks.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Threading.Tasks.Parallel.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Threading.Thread.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Threading.ThreadPool.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Threading.Timer.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.ValueTuple.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Xml.ReaderWriter.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Xml.XDocument.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Xml.XmlDocument.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Xml.XmlSerializer.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Xml.XPath.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Xml.XPath.XDocument.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\BotDetect.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\BotDetect.Web.Mvc.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Antiforgery.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Authentication.Abstractions.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Authentication.Core.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Authorization.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Authorization.Policy.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Cors.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.DataProtection.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Diagnostics.Abstractions.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Hosting.Abstractions.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Html.Abstractions.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Http.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Http.Extensions.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Http.Features.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.JsonPatch.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Localization.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Mvc.Abstractions.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Mvc.ApiExplorer.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Mvc.Core.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Mvc.Cors.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Mvc.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Mvc.Localization.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Mvc.Razor.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Mvc.RazorPages.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Mvc.TagHelpers.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Razor.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Razor.Language.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Razor.Runtime.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Routing.Abstractions.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Routing.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Session.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.WebUtilities.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.CodeAnalysis.CSharp.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.CodeAnalysis.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.CodeAnalysis.Razor.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.DotNet.PlatformAbstractions.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.Caching.Abstractions.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.Caching.Memory.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.Configuration.Binder.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.Configuration.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.DependencyInjection.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.DependencyModel.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.FileProviders.Composite.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.Localization.Abstractions.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.Localization.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.Logging.Abstractions.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.ObjectPool.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.Options.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.PlatformAbstractions.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.Primitives.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.WebEncoders.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Net.Http.Headers.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Win32.Registry.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Newtonsoft.Json.Bson.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Buffers.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Collections.Immutable.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.ComponentModel.Annotations.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Diagnostics.DiagnosticSource.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Drawing.Common.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Reflection.Metadata.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Security.AccessControl.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Security.Cryptography.Xml.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Security.Principal.Windows.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Text.Encoding.CodePages.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Text.Encodings.Web.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Antiforgery.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Authentication.Abstractions.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Authentication.Core.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Authorization.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Authorization.Policy.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Cors.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Cryptography.Internal.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.DataProtection.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.DataProtection.Abstractions.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Diagnostics.Abstractions.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Hosting.Abstractions.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Html.Abstractions.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Http.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Http.Extensions.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Http.Features.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.JsonPatch.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Localization.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Mvc.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Mvc.Abstractions.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Mvc.ApiExplorer.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Mvc.Core.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Mvc.Cors.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Mvc.DataAnnotations.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Mvc.Formatters.Json.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Mvc.Localization.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Mvc.Razor.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Mvc.Razor.Extensions.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Mvc.RazorPages.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Mvc.TagHelpers.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Mvc.ViewFeatures.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Razor.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Razor.Language.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Razor.Runtime.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Routing.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Routing.Abstractions.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.Session.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNetCore.WebUtilities.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.CodeAnalysis.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.CodeAnalysis.CSharp.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.CodeAnalysis.Razor.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.Caching.Abstractions.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.Caching.Memory.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.Configuration.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.Configuration.Binder.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.DependencyInjection.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.FileProviders.Composite.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.FileSystemGlobbing.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.Hosting.Abstractions.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.Localization.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.Localization.Abstractions.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.Logging.Abstractions.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.ObjectPool.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.Options.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.PlatformAbstractions.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.Primitives.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Extensions.WebEncoders.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.Net.Http.Headers.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Newtonsoft.Json.Bson.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Buffers.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Collections.Immutable.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Diagnostics.DiagnosticSource.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Reflection.Metadata.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Text.Encodings.Web.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Facebook.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Facebook.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\DotNetOpenAuth.AspNet.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\DotNetOpenAuth.Core.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\DotNetOpenAuth.GoogleOAuth2.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\DotNetOpenAuth.OAuth.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\DotNetOpenAuth.OpenId.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Web.Providers.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Org.Mentalis.Security.Cryptography.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Mono.Math.dll
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\DotNetOpenAuth.AspNet.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\DotNetOpenAuth.Core.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\DotNetOpenAuth.OAuth.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\DotNetOpenAuth.OpenId.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Microsoft.AspNet.Membership.OpenAuth.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\System.Web.Providers.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Org.Mentalis.Security.Cryptography.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\Mono.Math.xml
+D:\C#\MVC\WebBanHang1\WebBanHang1\bin\ASPSnippets.GoogleAPI.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\WebBanHang1.dll.config
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\WebBanHang1.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\WebBanHang1.pdb
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\csc.exe
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\csc.exe.config
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\csc.rsp
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\csi.exe
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\csi.exe.config
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\csi.rsp
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\System.AppContext.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\System.Collections.Immutable.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\System.Console.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\System.Diagnostics.Process.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\System.IO.Compression.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\System.IO.FileSystem.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\System.IO.Pipes.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\System.Reflection.Metadata.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\System.Security.AccessControl.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\System.Security.Claims.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\System.Security.Principal.Windows.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\System.Threading.Thread.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\System.ValueTuple.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\System.Xml.XmlDocument.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\System.Xml.XPath.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\vbc.exe
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\vbc.exe.config
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\vbc.rsp
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\VBCSCompiler.exe
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\roslyn\VBCSCompiler.exe.config
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\ASPSnippets.GoogleAPI.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\BotDetect.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\BotDetect.Web.Mvc.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\EntityFramework.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\EntityFramework.SqlServer.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\Facebook.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\Microsoft.ApplicationInsights.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\Microsoft.Web.Infrastructure.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\Newtonsoft.Json.Bson.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\Newtonsoft.Json.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\PagedList.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\PagedList.Mvc.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\System.Web.Helpers.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\System.Web.Mvc.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\System.Web.Optimization.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\System.Web.Providers.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\System.Web.Razor.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\System.Web.WebPages.Deployment.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\System.Web.WebPages.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\System.Web.WebPages.Razor.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\WebGrease.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\Antlr3.Runtime.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\EntityFramework.xml
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\EntityFramework.SqlServer.xml
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\Facebook.xml
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\Newtonsoft.Json.xml
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\Newtonsoft.Json.Bson.xml
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\PagedList.xml
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\PagedList.Mvc.xml
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\System.Web.Providers.xml
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\System.Web.Helpers.xml
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\System.Web.Mvc.xml
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\System.Web.Optimization.xml
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\System.Web.Razor.xml
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\System.Web.WebPages.xml
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\System.Web.WebPages.Deployment.xml
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\System.Web.WebPages.Razor.xml
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\Microsoft.ApplicationInsights.xml
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\Antlr3.Runtime.pdb
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\obj\Debug\WebBanHang1.csprojResolveAssemblyReference.cache
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\obj\Debug\WebBanHang1.csproj.CoreCompileInputs.cache
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\obj\Debug\WebBanHang1.csproj.CopyComplete
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\obj\Debug\WebBanHang1.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\obj\Debug\WebBanHang1.pdb
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\Microsoft.AI.Agent.Intercept.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\Microsoft.AI.DependencyCollector.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\Microsoft.AI.Web.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\Microsoft.AI.WindowsServer.dll
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\Microsoft.AI.DependencyCollector.xml
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\Microsoft.AI.Web.xml
+D:\C#\MVC\WebBanHang1 - Copy\WebBanHang1\bin\Microsoft.AI.WindowsServer.xml
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\WebBanHang1.dll.config
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\WebBanHang1.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\WebBanHang1.pdb
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\csc.exe
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\csc.exe.config
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\csc.rsp
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\csi.exe
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\csi.exe.config
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\csi.rsp
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\System.AppContext.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\System.Collections.Immutable.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\System.Console.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\System.Diagnostics.Process.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\System.IO.Compression.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\System.IO.FileSystem.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\System.IO.Pipes.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\System.Reflection.Metadata.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\System.Security.AccessControl.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\System.Security.Claims.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\System.Security.Principal.Windows.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\System.Threading.Thread.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\System.ValueTuple.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\System.Xml.XmlDocument.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\System.Xml.XPath.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\vbc.exe
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\vbc.exe.config
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\vbc.rsp
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\VBCSCompiler.exe
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\roslyn\VBCSCompiler.exe.config
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\BotDetect.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\BotDetect.Web.Mvc.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\EntityFramework.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\EntityFramework.SqlServer.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\Facebook.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\Microsoft.AI.Agent.Intercept.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\Microsoft.AI.DependencyCollector.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\Microsoft.AI.Web.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\Microsoft.AI.WindowsServer.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\Microsoft.ApplicationInsights.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\Microsoft.Web.Infrastructure.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\Newtonsoft.Json.Bson.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\Newtonsoft.Json.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\PagedList.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\PagedList.Mvc.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\System.Web.Helpers.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\System.Web.Mvc.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\System.Web.Optimization.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\System.Web.Providers.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\System.Web.Razor.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\System.Web.WebPages.Deployment.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\System.Web.WebPages.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\System.Web.WebPages.Razor.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\WebGrease.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\EntityFramework.xml
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\EntityFramework.SqlServer.xml
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\Facebook.xml
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\Microsoft.AI.DependencyCollector.xml
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\Microsoft.AI.Web.xml
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\Microsoft.AI.WindowsServer.xml
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\Newtonsoft.Json.xml
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\Newtonsoft.Json.Bson.xml
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\PagedList.xml
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\PagedList.Mvc.xml
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\System.Web.Providers.xml
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\System.Web.Helpers.xml
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\System.Web.Mvc.xml
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\System.Web.Optimization.xml
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\System.Web.Razor.xml
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\System.Web.WebPages.xml
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\System.Web.WebPages.Deployment.xml
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\System.Web.WebPages.Razor.xml
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\Microsoft.ApplicationInsights.xml
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\obj\Debug\WebBanHang1.csproj.CoreCompileInputs.cache
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\obj\Debug\WebBanHang1.csproj.CopyComplete
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\obj\Debug\WebBanHang1.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\obj\Debug\WebBanHang1.pdb
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\obj\Debug\WebBanHang1.csprojAssemblyReference.cache
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\System.Net.Http.Formatting.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\System.Web.Http.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\System.Web.Http.WebHost.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\System.Net.Http.Formatting.xml
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\System.Web.Http.xml
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\System.Web.Http.WebHost.xml
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\CKFinder.dll
+D:\C#\MVC\WebBanHang1 - Copy - Copy\WebBanHang1\bin\CKFinder.pdb
+D:\C#\MVC\Website MVC\WebBanHang1\bin\WebBanHang1.dll.config
+D:\C#\MVC\Website MVC\WebBanHang1\bin\WebBanHang1.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\WebBanHang1.pdb
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\csc.exe
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\csc.exe.config
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\csc.rsp
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\csi.exe
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\csi.exe.config
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\csi.rsp
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\System.AppContext.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\System.Collections.Immutable.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\System.Console.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\System.Diagnostics.Process.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\System.IO.Compression.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\System.IO.FileSystem.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\System.IO.Pipes.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\System.Reflection.Metadata.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\System.Security.AccessControl.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\System.Security.Claims.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\System.Security.Principal.Windows.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\System.Threading.Thread.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\System.ValueTuple.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\System.Xml.XmlDocument.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\System.Xml.XPath.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\vbc.exe
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\vbc.exe.config
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\vbc.rsp
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\VBCSCompiler.exe
+D:\C#\MVC\Website MVC\WebBanHang1\bin\roslyn\VBCSCompiler.exe.config
+D:\C#\MVC\Website MVC\WebBanHang1\bin\BotDetect.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\BotDetect.Web.Mvc.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\CKFinder.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\EntityFramework.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\EntityFramework.SqlServer.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\Facebook.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\Microsoft.AI.Agent.Intercept.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\Microsoft.AI.DependencyCollector.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\Microsoft.AI.Web.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\Microsoft.AI.WindowsServer.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\Microsoft.ApplicationInsights.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\Microsoft.Web.Infrastructure.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\Newtonsoft.Json.Bson.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\Newtonsoft.Json.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\PagedList.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\PagedList.Mvc.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\System.Net.Http.Formatting.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\System.Web.Helpers.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\System.Web.Http.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\System.Web.Http.WebHost.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\System.Web.Mvc.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\System.Web.Optimization.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\System.Web.Providers.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\System.Web.Razor.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\System.Web.WebPages.Deployment.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\System.Web.WebPages.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\System.Web.WebPages.Razor.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\WebGrease.dll
+D:\C#\MVC\Website MVC\WebBanHang1\bin\CKFinder.pdb
+D:\C#\MVC\Website MVC\WebBanHang1\bin\EntityFramework.xml
+D:\C#\MVC\Website MVC\WebBanHang1\bin\EntityFramework.SqlServer.xml
+D:\C#\MVC\Website MVC\WebBanHang1\bin\Facebook.xml
+D:\C#\MVC\Website MVC\WebBanHang1\bin\Microsoft.AI.DependencyCollector.xml
+D:\C#\MVC\Website MVC\WebBanHang1\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\C#\MVC\Website MVC\WebBanHang1\bin\Microsoft.AI.Web.xml
+D:\C#\MVC\Website MVC\WebBanHang1\bin\Microsoft.AI.WindowsServer.xml
+D:\C#\MVC\Website MVC\WebBanHang1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\C#\MVC\Website MVC\WebBanHang1\bin\Newtonsoft.Json.xml
+D:\C#\MVC\Website MVC\WebBanHang1\bin\Newtonsoft.Json.Bson.xml
+D:\C#\MVC\Website MVC\WebBanHang1\bin\PagedList.xml
+D:\C#\MVC\Website MVC\WebBanHang1\bin\PagedList.Mvc.xml
+D:\C#\MVC\Website MVC\WebBanHang1\bin\System.Net.Http.Formatting.xml
+D:\C#\MVC\Website MVC\WebBanHang1\bin\System.Web.Http.xml
+D:\C#\MVC\Website MVC\WebBanHang1\bin\System.Web.Http.WebHost.xml
+D:\C#\MVC\Website MVC\WebBanHang1\bin\System.Web.Providers.xml
+D:\C#\MVC\Website MVC\WebBanHang1\bin\System.Web.Helpers.xml
+D:\C#\MVC\Website MVC\WebBanHang1\bin\System.Web.Mvc.xml
+D:\C#\MVC\Website MVC\WebBanHang1\bin\System.Web.Optimization.xml
+D:\C#\MVC\Website MVC\WebBanHang1\bin\System.Web.Razor.xml
+D:\C#\MVC\Website MVC\WebBanHang1\bin\System.Web.WebPages.xml
+D:\C#\MVC\Website MVC\WebBanHang1\bin\System.Web.WebPages.Deployment.xml
+D:\C#\MVC\Website MVC\WebBanHang1\bin\System.Web.WebPages.Razor.xml
+D:\C#\MVC\Website MVC\WebBanHang1\bin\Microsoft.ApplicationInsights.xml
+D:\C#\MVC\Website MVC\WebBanHang1\obj\Debug\WebBanHang1.csprojAssemblyReference.cache
+D:\C#\MVC\Website MVC\WebBanHang1\obj\Debug\WebBanHang1.csproj.CoreCompileInputs.cache
+D:\C#\MVC\Website MVC\WebBanHang1\obj\Debug\WebBanHang1.csproj.CopyComplete
+D:\C#\MVC\Website MVC\WebBanHang1\obj\Debug\WebBanHang1.dll
+D:\C#\MVC\Website MVC\WebBanHang1\obj\Debug\WebBanHang1.pdb

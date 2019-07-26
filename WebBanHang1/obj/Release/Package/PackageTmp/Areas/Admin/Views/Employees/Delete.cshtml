@@ -1,0 +1,85 @@
+﻿@model WebBanHang1.Models.Employees
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/Layout_Admin.cshtml";
+}
+
+
+<div class="vung">
+    <h2>Xóa nhân viên @Model.EmployeeName</h2>
+
+    <h3>bạn có thực sự muốn xóa?</h3>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã nhân viên
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeID)
+        </dd>
+        <dt>
+            Tên nhân viên
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeName)
+        </dd>
+        <dt>
+            Ngày sinh
+        </dt>
+
+        <dd>
+            @Model.BirthDate.Value.ToShortDateString()
+        </dd>
+
+        <dt>
+            Số điện thoại
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            Địa chỉ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            Giới tính
+        </dt>
+
+        <dd>
+            <a href="#">@(Model.gioitinh == true ? "Nam" : "Nữ")</a>
+        </dd>
+
+        <dt>
+            Ảnh đại diện
+        </dt>
+
+        <dd>
+            <img style="max-width:30%;max-height:30%;" src="~/Images/@Model.Picture" alt="@Model.EmployeeName" />
+        </dd>
+
+        <dt>
+            Tên Đăng nhập
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenDN)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-pinterest" /> |
+            @Html.ActionLink("Quay lại", "Index")
+        </div>
+    }
+</div>

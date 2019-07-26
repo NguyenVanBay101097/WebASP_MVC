@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "danhsach";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using WebBanHang1.Models
+@{
+
+    using (WebBanHang1.Models.BanHang bh = new WebBanHang1.Models.BanHang())
+    {
+        //selct Orders.CustomerID,COUNT(OrderID) from Orders join Customers on Orders.CustomerID = Customers.CustomerID group by Orders.CustomerID order by COUNT(OrderID) desc
+        var ds = bh.Customers.Join(bh.Orders, p => p.CustomerID, e => e.CustomerID, (p, e) => new { CustomerID = p.CustomerID, CustomerName = p.CustomerName }).GroupBy(p => p.CustomerID, h => h.CustomerName).ToList();
+        foreach (var item in ds)
+        {
+            <p>@item.ElementAt(0)</p>
+            <p>@item.Key</p>
+
+
+
+
+        }
+
+    }
+
+}

@@ -1,0 +1,111 @@
+﻿
+@{
+    ViewBag.Title = "thông tin tài khoản";
+    Layout = "~/Areas/Admin/Views/Shared/Layout_Admin.cshtml";
+}
+<link href="~/Content/style.css" rel="stylesheet" />
+
+@model  WebBanHang1.Models.Employees
+@using (Html.BeginForm("Thongtintaikhoan", "Trangchu", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="section group" style="">
+        @Html.HiddenFor(x=>x.TenVT)
+
+        <div class="col span_2_of_3" style="background-color:#fafafa;">
+            <div class="contact-form">
+                <h3 style="font-size:150%;">Thông tin tài khoản</h3>
+
+                <div>
+                    <span>
+                        <label>
+                            Tên tài khoản
+                            @Html.HiddenFor(x => x.EmployeeID)
+                        </label>
+                    </span>
+                    <span>@Html.TextBoxFor(x => x.EmployeeName, new { @required = true, @readonly = true, pattern = @".*\S+.*", @title = "không để trống" })</span>
+                </div>
+               
+                <div>
+                    <span><label>Ngày sinh</label></span>
+                    <span>
+                        <input readonly type="date" value="@Model.BirthDate.Value.ToString("yyyy-MM-dd")" name="BirthDate" class="form-control" />
+                        @Html.ValidationMessageFor(model => model.BirthDate, "", new { @class = "text-danger" })
+                    </span>
+                </div>
+                <div>
+                    <span><label>Số điện thoại</label></span>
+                    <span>@Html.TextBoxFor(x => x.Phone, new { @readonly = true, pattern = @"0[0-9\s.-]{9,13}", @title = "nhập số điện thoại" })</span>
+                </div>
+                <div>
+                    <span><label>Địa chỉ</label></span>
+                    <span>@Html.TextAreaFor(x => x.Address, new { @readonly = true, pattern = @".*\S+.*", @title = "không để trống" })</span>
+                </div>
+                <div>
+                    Giới tính
+                    <div >
+                        <div class="checkbox">
+                            <select disabled id="gioitinh" name="gioitinh" class="contact">
+                                <option value="True" @(Model.gioitinh == true ? "Selected" : "")>Nam</option>
+                                <option value="False" @(Model.gioitinh == false ? "Selected" : "")>Nữ</option>
+                            </select>
+                            @Html.ValidationMessageFor(model => model.gioitinh, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <span>
+                    <input type="submit" id="btncapnhat" value="Cập nhật" class="btn btn-default">
+                    <input type="button" id="btnsua" value="Sửa" class="btn btn-default">
+
+                </span>
+
+            </div>
+        </div>
+        <div class="col span_2_of_3" style="background-color:#fafafa;width:29%;">
+            <div class="contact-form">
+
+                <span><label>Tên đăng nhập</label></span>
+                <span>@Html.TextBoxFor(x => x.TenDN, new { @readonly = true, @required = true, pattern = @".*\S+.*", @title = "không để trống" })</span>
+            </div>
+            <div class="contact-form">
+                <span><label>Mật khẩu</label></span>
+                <span>@Html.TextBoxFor(x => x.MatKhau, new { @readonly = true, @required = true, pattern = @".*\S+.*", @title = "không để trống" })</span>
+            </div>
+        </div>
+        <div class="col span_2_of_3" style="background-color:#fafafa;width:29%;">
+            <img id="hinhanh" src="@if (Model.Picture == null) { @Url.Content("~/Images/none-image.jpg")} else {@Url.Content("~/Images/"+Model.Picture) } " style="max-height:80%;max-width:100%;" />
+            <input type="file" onchange="readURL(this);" name="myImage" id="myImage" accept="image/*" />
+
+        </div>
+
+
+
+        <script>
+            $("#btnsua").click(function () {
+                $("input:not(#TenDN)").attr("readonly", false);
+                $("textarea").attr("readonly", false);
+            
+                $("#gioitinh").removeAttr("disabled");
+                $("#EmployeeName").focus();
+            });
+            $("#btncapnhat").click(function () {
+              
+                $("#gioitinh").removeAttr("disabled");
+               
+            });
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('#hinhanh')
+                            .attr('src', e.target.result)
+
+                    };
+
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+        </script>
+    </div>
+}
+

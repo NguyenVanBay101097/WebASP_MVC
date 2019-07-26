@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewBag.Title = "ThanhToan";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using WebBanHang1.Models
+
+@{
+
+    Gio tranggio = Session["gio"] as Gio;
+    var soluong = 0; double tongtien = 0;
+    foreach (var item in tranggio.DSSP)
+    {
+        soluong += item.SoLuong;
+        tongtien += (double)item.ThanhTien;
+    }
+
+}
+@model WebBanHang1.Models.Orders
+<div class="section group"style="margin-top:4%;">
+    <div class="col span_2_of_3" style="background-color:#fafafa;">
+        <div class="contact-form">
+            <h3 style="font-size:150%;">Thông tin người nhận</h3>
+            @using (Html.BeginForm("ThanhToan", "Gio", FormMethod.Post))
+            {
+                var cs = ViewBag.customer as Customers;
+                
+                <div>
+                    <span><label>Tên người nhận</label></span>
+                    <span>@Html.TextBoxFor(x => x.RecevierName, new { @required = true,Value=cs.CustomerName, pattern = @".*\S+.*", @title = "không để trống" })</span>
+                </div>
+                <div>
+                    <span><label>E-mail</label></span>
+                    <span>@Html.TextBoxFor(x => x.Email, new { @required = true,Value=cs.Email, pattern = @"[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", @title = "nhập gmail" })</span>
+                </div>
+                <div>
+                    <span><label>Số điện thoại</label></span>
+                    <span>@Html.TextBoxFor(x => x.Phone, new { @required = true,Value=cs.phonenumber, pattern = @"0[0-9\s.-]{9,13}", @title = "nhập số điện thoại" })</span>
+                </div>
+                <div>
+                    <span><label>Địa chỉ</label></span>
+
+                    <span>
+                        <textarea id="@Html.IdFor(x=>x.Address)" name="@Html.NameFor(x=>x.Address)"  title="không để trống" required>@cs.Address</textarea>
+                        <script>
+                            $("#Address").keyup(function () {
+                                if ($("#Address").val().trim()=="") {
+                                    $(".myButton").attr('disabled', 'disabled');
+                                }
+                                else {
+                                    $('.myButton').removeAttr('disabled');
+                                }
+                            });
+                        </script>
+                    </span>
+                </div>
+                <script>
+                   
+                </script>
+                <div>
+                    <span><input type="submit" value="Gửu đơn hàng" class="myButton" ></span>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="col span_1_of_3" style="background-color:#fafafa;">
+        <h3>Thông tin đơn hàng</h3>
+        <div><label>Số lượng sản phẩm:</label><label>@soluong.ToString()</label></div>
+        <div><label>Tổng tiền:</label><label>@tongtien.ToString("0,000") đ</label></div>
+        <div><label style="color:#f7cf6e">Giao hàng miễn phí toàn quốc!</label></div>
+
+    </div>
+</div>
+

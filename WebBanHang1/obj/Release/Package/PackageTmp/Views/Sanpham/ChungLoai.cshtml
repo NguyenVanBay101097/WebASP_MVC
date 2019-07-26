@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "Sanpham_CL";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{ 
+    TempData["action"] = "ChungLoai";
+    TempData["controller"] = "Sanpham";
+}
+@model PagedList.IPagedList<WebBanHang1.Models.Products>
+@{Html.RenderPartial("~/Views/Partial_view/DS_Sanphammoi.cshtml");}
+

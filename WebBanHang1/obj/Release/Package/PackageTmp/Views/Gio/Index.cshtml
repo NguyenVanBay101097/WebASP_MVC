@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Trang giỏ hàng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    
+}
+@using WebBanHang1.Models
+@model List<Products>
+  
+@section jsFooter{
+    <script src="~/Scripts/Gio.js"></script>
+}
+<h1>Thông tin chi tiết giỏ hàng:</h1>
+<div class="section group">
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+    @Html.Partial("~/Views/Partial_view/Gio.cshtml")
+    <div style="float:right"><span style="color:red;font-size:150%;">Tổng tiền:</span><span id="tongtien"> @double.Parse(TempData["tongtien"].ToString()).ToString("0,00")</span> đ</div>
+    <button id="btncontinue" class=" btn btn-default">Tiếp tục mua hàng</button>
+    <button id="btnupdate" class="btn btn-default">Cập nhật giỏ hàng</button>
+    <button id="btndelete" class="btn btn-default">Xóa giỏ hàng</button>
+    <button id="btncheckout" onclick="window.location.href='Gio/Thanhtoan'" class="btn btn-default">Thanh toán</button>
+    @if (Model.Count > 0)
+    {
+
+
+    }
+    else
+    {
+        <script>
+            alert("chưa có sản phẩm trong giỏ!");
+        </script>
+    }
+
+
+</div>

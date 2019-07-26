@@ -1,0 +1,118 @@
+﻿@model WebBanHang1.Models.Employees
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/Layout_Admin.cshtml";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm("Edit", "Employees", FormMethod.Post,new { enctype = "multipart/form-data" }))
+{
+                @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>Employees</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.EmployeeID)
+    @Html.HiddenFor(model => model.TenDN)
+    @Html.HiddenFor(model => model.MatKhau)
+    @Html.HiddenFor(model => model.Picture)
+
+    <div class="form-group">
+        Tên nhân viên
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.EmployeeName, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.EmployeeName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        Ngày sinh
+        <div class="col-md-10">
+            <input type="date" value="@Model.BirthDate.Value.ToString("yyyy-MM-dd")" name="BirthDate" class="form-control" />
+            @Html.ValidationMessageFor(model => model.BirthDate, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        Số điện thoại
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        Địa chỉ
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        Giới tính
+        <div class="col-md-10">
+            <div class="checkbox">
+                <select name="gioitinh" class="form-control">
+                    <option value="True" @(Model.gioitinh == true ? "Selected" : "")>Nam</option>
+                    <option value="False" @(Model.gioitinh == false ? "Selected" : "")>Nữ</option>
+                </select>
+                @Html.ValidationMessageFor(model => model.gioitinh, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        Hình đại diện
+        <div class="col-md-10">
+            <button type="button" @(Model.Picture != null ? "hidden" : "") id="chonanh" class="btn"> <i class="fa fa-camera fa-4x"></i><i>+</i></button>
+            <img style="max-width:30%;max-height:30%;position:relative;" src="@Model.Picture" @(Model.Picture == null ? "hidden" : "") />
+            <span @(Model.Picture == null ? "hidden" : "") onclick="back(this);" style="position:absolute;" class="cl"> <i class="fa fa-close"></i></span>
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        Vị trí
+        <div class="col-md-10">
+            <select id="TenVT" name="TenVT" required class="form-control">
+                @foreach (WebBanHang1.Models.VaiTros option in ViewBag.a)
+                {
+                    <option value="@option.TenVT" @(option.TenVT == Model.TenVT ? "selected='selected'" : "")>@option.TenVT</option>
+                }
+            </select>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Lưu" class="btn btn-primary" />|@Html.ActionLink("Quay Lại", "Index")
+        </div>
+    </div>
+</div>
+}
+
+<script type="text/javascript">
+   
+    $('#chonanh').click(function () {
+        var finder = new CKFinder();
+        finder.selectActionFunction = function (url) {
+            $('#Picture').val(url);
+            $('#chonanh').next().attr('src', url).attr('hidden', false);
+        };
+        finder.popup();
+        $("#chonanh").attr('hidden', true);
+        $($('#chonanh').next().next()).attr('hidden', false);
+    });
+    function back(input) {
+        $(input).prev().attr('src', '')
+        $(input).attr('hidden', true);
+        $($(input).prev()).prev().val(null);
+        $($($(input).prev()).prev()).attr('hidden', false);
+    }
+
+</script>

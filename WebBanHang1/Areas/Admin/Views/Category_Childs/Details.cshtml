@@ -1,0 +1,36 @@
+﻿@model WebBanHang1.Models.Category_Childs
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/Layout_Admin.cshtml";
+}
+
+<h2>Chi tiết Loại</h2>
+
+<div>
+    <h4>@Model.CategoryName</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên Danh mục
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category_Fathers.CategoryName)
+        </dd>
+
+        <dt>
+            Tên loại
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategoryName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.CategoryChildID }) |
+    @Html.ActionLink("Trở về", "Index", "Category_Childs", new { idcha = Model.CategoryFatherID }, null)
+
+</p>
